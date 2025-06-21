@@ -1,9 +1,33 @@
+import Image from "next/image";
+
+
 export default function Home() {
   return (
     <main style={{
       background: '#f5f6fa',
       fontFamily: 'Inter, sans-serif'
     }}>
+
+              {/* --- Profile Image --- */}
+              <div style={{ flex: 'none' }}>
+                <Image
+                  src="/profile.png"
+                  alt="Neev Grover, founder of DuneBroom"
+                  width={140}
+                  height={140}
+                  style={{
+                    borderRadius: '50%',
+                    border: '4px solid #111',
+                    boxShadow: '0 4px 18px rgba(0,0,0,0.09)',
+                    background: '#eee',
+                    display: 'block',
+                    margin: 0
+                  }}
+                />
+              </div>
+      
+
+
       {/* HERO SECTION */}
       <section id="hero" style={{
         minHeight: '85vh',
@@ -15,6 +39,8 @@ export default function Home() {
         color: '#fff',
         textAlign: 'center',
         padding: '0 2rem'
+
+        
       }}>
         <h1 style={{ fontSize: 64, fontWeight: 800, letterSpacing: '-0.03em', margin: 0 }}>Neev Grover</h1>
         <h2 style={{ fontSize: 28, fontWeight: 400, margin: '1.2rem 0' }}>Sweep Clean, Think Smart</h2>
