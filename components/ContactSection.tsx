@@ -1,14 +1,35 @@
-// ContactSection.tsx – drop this inside app/components or app/ directory
-// Uses Formspree (free) to email submissions. Replace YOUR_FORMSPREE_ENDPOINT below
-// If you prefer another service (EmailJS, Netlify Forms, etc.) swap the <form> action
-// -----------------------------------------------------------------------------
-
+// ContactSection.tsx – keeps user on page & recenters form with better side spacing
 'use client';
 
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 
 export default function ContactSection() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus('sending');
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xnnvbrzq', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: data,
+      });
+
+      if (response.ok) {
+        form.reset();
+        setStatus('sent');
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
+  }
 
   return (
     <section
@@ -16,7 +37,7 @@ export default function ContactSection() {
       style={{
         background: '#0d0f15',
         color: '#f5f6fa',
-        padding: '5rem 2rem 6rem',
+        padding: '5rem 1.5rem 6rem', // increased side padding
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -44,9 +65,7 @@ export default function ContactSection() {
       </p>
 
       <form
-        action="https://formspree.io/f/xnnvbrzq" // ← replace
-        method="POST"
-        onSubmit={() => setStatus('sending')}
+        onSubmit={handleSubmit}
         style={{
           background: '#131722',
           borderRadius: 16,
@@ -54,9 +73,11 @@ export default function ContactSection() {
           padding: 32,
           width: '100%',
           maxWidth: 520,
+          margin: '0 auto', // centers & adds space on both sides
           display: 'flex',
           flexDirection: 'column',
           gap: 20,
+          boxSizing: 'border-box',
         }}
       >
         <label style={{ fontWeight: 500 }}>Name</label>
@@ -101,7 +122,7 @@ export default function ContactSection() {
             transition: 'background 0.2s ease',
           }}
         >
-          {status === 'sending' ? 'Sending…' : 'Send Message'}
+          {status === 'sending' ? 'Sending…' : status === 'sent' ? 'Sent!' : 'Send Message'}
         </button>
 
         {status === 'sent' && (
