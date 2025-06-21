@@ -209,54 +209,6 @@ export default function Home() {
     marginBottom: 32
   }}>
 
-    <a
-      href="https://github.com/groverneev"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{
-        background: '#1e40af',
-        color: '#fff',
-        borderRadius: 8,
-        padding: '10px 24px',
-        fontWeight: 600,
-        textDecoration: 'none'
-      }}
-    >
-      GitHub
-    </a>
-    <a
-      href="https://x.com/lightningpro535"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{
-        background: '#18181b',
-        color: '#fff',
-        borderRadius: 8,
-        padding: '10px 24px',
-        fontWeight: 600,
-        textDecoration: 'none'
-      }}
-    >
-      X
-    </a>
-
-    <a
-      href="techunpacked.substack.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{
-        background: '#14b8a6',
-        color: '#fff',
-        borderRadius: 8,
-        padding: '10px 24px',
-        fontWeight: 600,
-        textDecoration: 'none'
-      }}
-    >
-      Substack
-    </a>
-
-
   </div>
   {/* Embedded Google Form */}
   <div style={{
