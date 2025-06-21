@@ -42,18 +42,52 @@ export default function Home() {
           <h1 style={{ fontSize: 64, fontWeight: 800, letterSpacing: '-0.03em', margin: 0 }}>Neev Grover</h1>
           <h2 style={{ fontSize: 28, fontWeight: 400, margin: '1.2rem 0' }}>Sophomore at the Harker School</h2>
           <p style={{ fontSize: 22, maxWidth: 600, margin: '0 auto 2rem auto' }}> Neev is passionate about Computer Science, Chess, and Music. He enjoys building projects, playing competitive chess, and writing about technology on his blog at <a href="https://techunpacked.substack.com" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}> Substack</a>.</p>
-        <a href="/mission_statement" style={{
-          background: '#fff',
-          color: '#0e0e0e',
-          fontWeight: 700,
-          fontSize: 20,
-          borderRadius: 8,
-          padding: '12px 32px',
-          textDecoration: 'none',
-          boxShadow: '0 4px 16px rgba(0,0,0,0.06)'
-        }}>
-          Mission Statement
-        </a>
+    <a
+      href="https://github.com/groverneev"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        background: '#1e40af',
+        color: '#fff',
+        borderRadius: 8,
+        padding: '10px 24px',
+        fontWeight: 600,
+        textDecoration: 'none'
+      }}
+    >
+      GitHub
+    </a>
+    <a
+      href="https://x.com/lightningpro535"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        background: '#18181b',
+        color: '#fff',
+        borderRadius: 8,
+        padding: '10px 24px',
+        fontWeight: 600,
+        textDecoration: 'none'
+      }}
+    >
+      X
+    </a>
+
+    <a
+      href="techunpacked.substack.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        background: '#14b8a6',
+        color: '#fff',
+        borderRadius: 8,
+        padding: '10px 24px',
+        fontWeight: 600,
+        textDecoration: 'none'
+      }}
+    >
+      Substack
+    </a>
       </section>
 
       {/* ABOUT PREVIEW */}
