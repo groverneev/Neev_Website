@@ -61,7 +61,8 @@ export default function ContactSection() {
           textAlign: 'center',
         }}
       >
-        Drop a message or just say hello – I usually reply within a day.
+        Don't want to use the form? Email me at groverneev at gmail.com.
+
       </p>
 
       <form
