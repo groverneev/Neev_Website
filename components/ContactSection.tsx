@@ -35,7 +35,7 @@ export default function ContactSection() {
     <section
       id="contact"
       style={{
-        background: '#0d0f15',
+        background: '#0E1321',
         color: '#f5f6fa',
         padding: '5rem 6rem 6rem', // increased side padding
         display: 'flex',
@@ -67,9 +67,9 @@ export default function ContactSection() {
       <form
         onSubmit={handleSubmit}
         style={{
-          background: '#131722',
+          background: '#0E1321',
           borderRadius: 16,
-          boxShadow: '0 6px 28px rgba(0,0,0,0.3)',
+          //boxShadow: '0 6px 28px rgba(0,0,0,0.3)',
           padding: 32,
           width: '100%',
           maxWidth: 520,
@@ -111,7 +111,7 @@ export default function ContactSection() {
           type="submit"
           disabled={status === 'sending'}
           style={{
-            background: '#2563eb',
+            background: '#2563eb', //send message
             color: '#fff',
             border: 'none',
             borderRadius: 12,
@@ -144,7 +144,7 @@ const inputStyle: React.CSSProperties = {
   padding: '12px 14px',
   borderRadius: 12,
   border: '1px solid #334155',
-  background: '#1e2533',
+  background: '#1e2533', //text box background
   color: '#f3f4f6',
   fontSize: 16,
   outline: 'none',
