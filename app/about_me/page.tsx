@@ -96,7 +96,7 @@ export default function AboutPage() {
             color: '#222',
             marginBottom: 8
           }}>
-              <b>Neev</b> is a sophomore at The Harker School passionate about Computer Science, Chess, and Music. He enjoys building projects, playing competitive chess, and writing about technology on his blog at <a href="https://techunpacked.substack.com" target="_blank" rel="noopener noreferrer">techunpacked.substack.com</a>.
+              <b>Neev</b> is a sophomore at The Harker School passionate about Computer Science, Chess, and Music. He enjoys building projects, playing competitive chess, and writing about technology on his blog at <a href="https://techunpacked.substack.com" target="_blank" rel="noopener noreferrer">Substack</a>.
           </p>
           <p style={{
             fontSize: 18,
