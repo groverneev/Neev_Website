@@ -8,7 +8,7 @@ export default function Footer() {
       color: '#64748b',
       fontSize: 14,
     }}>
-      &copy; {new Date().getFullYear()} DuneBroom. All rights reserved.
+      &copy; {new Date().getFullYear()} Neev Grover. All rights reserved.
       <br />
     </footer>
   );
