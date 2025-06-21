@@ -62,7 +62,6 @@ export default function ContactSection() {
         }}
       >
         Don't want to use the form? Email me at groverneev at gmail.com.
-
       </p>
 
       <form
