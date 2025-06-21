@@ -69,7 +69,7 @@ export default function Home() {
       target="_blank"
       rel="noopener noreferrer"
       style={{
-        background: '#18181b',
+        background: '#9B59B6',
         color: '#fff',
         borderRadius: 8,
         padding: '10px 24px',
@@ -94,6 +94,22 @@ export default function Home() {
       }}
     >
       Substack
+    </a>
+
+    <a
+      href="chess.com/member/lightningpro535/stats/rapid?days=0"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        background: '#F39C12',
+        color: '#fff',
+        borderRadius: 8,
+        padding: '10px 24px',
+        fontWeight: 600,
+        textDecoration: 'none'
+      }}
+    >
+      Chess
     </a>
 
 
