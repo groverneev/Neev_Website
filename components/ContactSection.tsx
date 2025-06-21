@@ -37,7 +37,7 @@ export default function ContactSection() {
       style={{
         background: '#0d0f15',
         color: '#f5f6fa',
-        padding: '5rem 1.5rem 6rem', // increased side padding
+        padding: '5rem 6rem 6rem', // increased side padding
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
