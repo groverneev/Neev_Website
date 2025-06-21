@@ -64,21 +64,6 @@ export default function Home() {
     >
       GitHub
     </a>
-    <a
-      href="https://x.com/lightningpro535"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{
-        background: '#9B59B6',
-        color: '#fff',
-        borderRadius: 8,
-        padding: '10px 24px',
-        fontWeight: 600,
-        textDecoration: 'none'
-      }}
-    >
-      X
-    </a>
 
     <a
       href="https://techunpacked.substack.com"
@@ -110,6 +95,22 @@ export default function Home() {
       }}
     >
       Chess
+    </a>
+
+    <a
+      href="https://x.com/lightningpro535"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        background: '#9B59B6',
+        color: '#fff',
+        borderRadius: 8,
+        padding: '10px 24px',
+        fontWeight: 600,
+        textDecoration: 'none'
+      }}
+    >
+      X
     </a>
 
 
