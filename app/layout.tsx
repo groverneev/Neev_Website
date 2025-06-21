@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 import './globals.css';
 
 export const metadata = {
-  title: 'DuneBroom | Sweep Clean, Think Smart',
+  title: 'Neev Grover',
   description: 'Robotics, youth innovation, and clean oceans.',
 };
 
