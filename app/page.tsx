@@ -41,7 +41,7 @@ export default function Home() {
 
           <h1 style={{ fontSize: 64, fontWeight: 800, letterSpacing: '-0.03em', margin: 0 }}>Neev Grover</h1>
           <h2 style={{ fontSize: 28, fontWeight: 400, margin: '1.2rem 0' }}>Sophomore at the Harker School</h2>
-          <p style={{ fontSize: 22, maxWidth: 600, margin: '0 auto 2rem auto' }}> Neev is passionate about Computer Science, Chess, and Music. He enjoys building projects, playing competitive chess, and writing about technology on his blog at <a href="https://techunpacked.substack.com" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}> Substack</a>.</p>
+          <p style={{ fontSize: 22, maxWidth: 600, margin: '0 auto 2rem auto' }}> Neev is passionate about Computer Science, Chess, and Music. He enjoys building projects, playing competitive chess, and writing about technology on his blog.</p>
   <div style={{
     display: 'flex',
     gap: 16,
@@ -81,7 +81,7 @@ export default function Home() {
     </a>
 
     <a
-      href="techunpacked.substack.com"
+      href="https://techunpacked.substack.com"
       target="_blank"
       rel="noopener noreferrer"
       style={{
@@ -93,11 +93,11 @@ export default function Home() {
         textDecoration: 'none'
       }}
     >
-      Substack
+      Blog
     </a>
 
     <a
-      href="chess.com/member/lightningpro535/stats/rapid?days=0"
+      href="https://chess.com/member/lightningpro535/stats/rapid?days=0"
       target="_blank"
       rel="noopener noreferrer"
       style={{
