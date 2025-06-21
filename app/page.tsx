@@ -24,7 +24,7 @@ export default function Home() {
         padding: '0 2rem'
       }}>
 
-                        {/* --- Profile Image --- */}
+        {/* --- Profile Image --- */}
               <div style={{ flex: 'none' }}>
                 <Image
                   src="/profile.png"
