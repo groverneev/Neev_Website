@@ -5,9 +5,6 @@ import { useRouter, usePathname } from 'next/navigation';
 
 const navLinks = [
   { href: '/about_me', label: 'About Me' },
-  { href: '/mission_statement', label: 'Mission Statement' },
-  { href: '/resources', label: 'Resources' },
-  { href: '/outreach', label: 'Outreach' },
   { href: '/#contact', label: 'Contact' }, 
 ];
 
@@ -55,7 +52,7 @@ export default function Navbar() {
 
         {/* Logo/title */}
 <a href="/" className="navbar-logo" style={{ fontWeight: 800, fontSize: 28, color: '#111', textDecoration: 'none' }}>
-  DuneBroom
+  Neev Grover
 </a>
 
         {/* Main nav links - hidden on mobile */}
