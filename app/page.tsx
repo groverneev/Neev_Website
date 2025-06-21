@@ -8,7 +8,23 @@ export default function Home() {
       fontFamily: 'Inter, sans-serif'
     }}>
 
-              {/* --- Profile Image --- */}
+      
+
+
+      {/* HERO SECTION */}
+      <section id="hero" style={{
+        minHeight: '85vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        background: '#0E1321',
+        color: '#fff',
+        textAlign: 'center',
+        padding: '0 2rem'
+      }}>
+
+                        {/* --- Profile Image --- */}
               <div style={{ flex: 'none' }}>
                 <Image
                   src="/profile.png"
@@ -25,23 +41,9 @@ export default function Home() {
                   }}
                 />
               </div>
-      
 
 
-      {/* HERO SECTION */}
-      <section id="hero" style={{
-        minHeight: '85vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        background: '#0E1321',
-        color: '#fff',
-        textAlign: 'center',
-        padding: '0 2rem'
 
-        
-      }}>
         <h1 style={{ fontSize: 64, fontWeight: 800, letterSpacing: '-0.03em', margin: 0 }}>Neev Grover</h1>
         <h2 style={{ fontSize: 28, fontWeight: 400, margin: '1.2rem 0' }}>Sweep Clean, Think Smart</h2>
         <p style={{ fontSize: 22, maxWidth: 600, margin: '0 auto 2rem auto' }}>
