@@ -8,9 +8,6 @@ export default function Home() {
       fontFamily: 'Inter, sans-serif'
     }}>
 
-      
-
-
       {/* HERO SECTION */}
       <section id="hero" style={{
         minHeight: '85vh',
@@ -41,8 +38,6 @@ export default function Home() {
                   }}
                 />
               </div>
-
-
 
         <h1 style={{ fontSize: 64, fontWeight: 800, letterSpacing: '-0.03em', margin: 0 }}>Neev Grover</h1>
         <h2 style={{ fontSize: 28, fontWeight: 400, margin: '1.2rem 0' }}>Sweep Clean, Think Smart</h2>
