@@ -39,11 +39,9 @@ export default function Home() {
                 />
               </div>
 
-        <h1 style={{ fontSize: 64, fontWeight: 800, letterSpacing: '-0.03em', margin: 0 }}>Neev Grover</h1>
-        <h2 style={{ fontSize: 28, fontWeight: 400, margin: '1.2rem 0' }}>Sophomore at the Harker School</h2>
-        <p style={{ fontSize: 22, maxWidth: 600, margin: '0 auto 2rem auto' }}>
-          Neev is passionate about Computer Science, Chess, and Music. He enjoys building projects, playing competitive chess, and writing about technology on his blog at <a href="https://techunpacked.substack.com" target="_blank" rel="noopener noreferrer">Substack</a>.
-        </p>
+          <h1 style={{ fontSize: 64, fontWeight: 800, letterSpacing: '-0.03em', margin: 0 }}>Neev Grover</h1>
+          <h2 style={{ fontSize: 28, fontWeight: 400, margin: '1.2rem 0' }}>Sophomore at the Harker School</h2>
+          <p style={{ fontSize: 22, maxWidth: 600, margin: '0 auto 2rem auto' }}> Neev is passionate about Computer Science, Chess, and Music. He enjoys building projects, playing competitive chess, and writing about technology on his blog at <a href="https://techunpacked.substack.com" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}> Substack</a>.</p>
         <a href="/mission_statement" style={{
           background: '#fff',
           color: '#0e0e0e',
