@@ -77,7 +77,7 @@ export default function Home() {
     rel="noopener noreferrer"
     style={{ color: '#fff' }}
   >
-    <i className="fa-solid fa-pen-nib fa-2x" />
+    <i className="fa-solid fa-pen fa-2x" />
   </a>
 
   {/* Chess.com profile */}
@@ -87,8 +87,10 @@ export default function Home() {
     rel="noopener noreferrer"
     style={{ color: '#fff' }}
   >
-    <i className="fa-solid fa-chess-knight fa-2x" />
+    <i className="fa-solid fa-chess-pawn fa-2x" />
   </a>
+
+
 
   {/* X/Twitter */}
   <a
@@ -99,6 +101,19 @@ export default function Home() {
   >
     <i className="fa-brands fa-x-twitter fa-2x" />
   </a>
+
+  {/* Substack */}
+  <a
+    href="https://www.linkedin.com/in/neev-grover-3bb873332/"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ color: '#fff' }}
+  >
+    <i className="fa-brands fa-linkedin fa-2x" />
+  </a>
+
+
+
 </div>
 
       </section>
