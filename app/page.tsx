@@ -41,7 +41,7 @@ export default function Home() {
           Neev Grover
         </h1>
         <h2 style={{ fontSize: 28, fontWeight: 400, margin: '1.2rem 0' }}>
-          Sophomore at the Harker School
+          Rising Sophomore at the Harker School
         </h2>
         <p style={{ fontSize: 22, maxWidth: 600, margin: '0 auto 2rem auto' }}>
           Neev is passionate about Computer Science, Chess, and Music. He enjoys building projects,
