@@ -1,18 +1,14 @@
 import Image from 'next/image';
 import ContactSection from '@/components/ContactSection';   // ← make sure the path matches your project
-import Head from 'next/head';
+import { FaGithub } from "react-icons/fa"
+import { SiSubstack } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa";
+import { FaChessPawn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 
 export default function Home() {
   return (
-    <>
-          {/* ───── HEAD goes here ───── */}
-      <Head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        />
-      </Head>
 
     <main style={{ background: '#f5f6fa', fontFamily: 'Inter, sans-serif' }}>
       {/* ───────── HERO SECTION ───────── */}
@@ -60,6 +56,8 @@ export default function Home() {
         </p>
 
 <div style={{ display: 'flex', gap: 24, justifyContent: 'center', marginBottom: 32 }}>
+
+
   {/* GitHub */}
   <a
     href="https://github.com/groverneev"
@@ -67,51 +65,49 @@ export default function Home() {
     rel="noopener noreferrer"
     style={{ color: '#fff' }}
   >
-    <i className="fa-brands fa-github fa-2x" />
+    <FaGithub size={37} />
   </a>
 
-  {/* Substack blog – FA doesn’t have a Substack logo, so use a pencil icon */}
+  {/* Substack */}
   <a
     href="https://techunpacked.substack.com"
     target="_blank"
     rel="noopener noreferrer"
     style={{ color: '#fff' }}
   >
-    <i className="fa-solid fa-pen fa-2x" />
+    <SiSubstack size={37} />
   </a>
 
-  {/* Chess.com profile */}
+  {/* Chess.com */}
   <a
     href="https://chess.com/member/lightningpro535/stats/rapid?days=0"
     target="_blank"
     rel="noopener noreferrer"
     style={{ color: '#fff' }}
   >
-    <i className="fa-solid fa-chess-pawn fa-2x" />
+<FaChessPawn size={37} />
   </a>
 
 
-
-  {/* X/Twitter */}
+  {/* X */}
   <a
     href="https://x.com/lightningpro535"
     target="_blank"
     rel="noopener noreferrer"
     style={{ color: '#fff' }}
   >
-    <i className="fa-brands fa-x-twitter fa-2x" />
+<FaXTwitter size={37} />
   </a>
 
-  {/* Substack */}
+  {/* LinkedIn */}
   <a
     href="https://www.linkedin.com/in/neev-grover-3bb873332/"
     target="_blank"
     rel="noopener noreferrer"
     style={{ color: '#fff' }}
   >
-    <i className="fa-brands fa-linkedin fa-2x" />
+<FaLinkedin size={37} />
   </a>
- 
 
 
 </div>
@@ -121,6 +117,5 @@ export default function Home() {
       {/* ───────── CONTACT SECTION (new) ───────── */}
       <ContactSection />
     </main>
-  </>
   );
 }
