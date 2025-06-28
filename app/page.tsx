@@ -8,7 +8,6 @@ import ContactSection from '@/components/ContactSection';   // ← make sure the
 import { FaGithub } from "react-icons/fa"
 import { SiSubstack } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
-import { FaChessPawn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 
@@ -81,16 +80,6 @@ export default function Home() {
     style={{ color: '#fff' }}
   >
     <SiSubstack size={37} />
-  </a>
-
-  {/* Chess.com */}
-  <a
-    href="https://chess.com/member/lightningpro535/stats/rapid?days=0"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{ color: '#fff' }}
-  >
-<FaChessPawn size={37} />
   </a>
 
 
