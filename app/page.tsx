@@ -1,3 +1,8 @@
+//npm install tailwindcss
+
+//tbd use tailwindcss and learn more about next js
+
+
 import Image from 'next/image';
 import ContactSection from '@/components/ContactSection';   // ← make sure the path matches your project
 import { FaGithub } from "react-icons/fa"

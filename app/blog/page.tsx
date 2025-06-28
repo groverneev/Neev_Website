@@ -7,7 +7,6 @@
 //    re‑validate every hour, so new Substack posts appear automatically.
 
 import Parser from 'rss-parser';
-import Image from 'next/image';
 
 // Revalidate every 3600 s (1 h) → Incremental Static Regeneration
 export const revalidate = 3600;
