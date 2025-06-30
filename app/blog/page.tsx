@@ -1,10 +1,7 @@
 // NEXT‑13/14 **app router** compatible blog integration
-// ----------------------------------------------------
-// 1. Install dependency once:
-//    npm install rss-parser
-// 2. Drop this file at:  app/blog/page.tsx  (App Router)
-// 3. Vercel (or `next build`) will statically render it and
-//    re‑validate every hour, so new Substack posts appear automatically.
+// 1. Install dependency once: npm install rss-parser
+
+// Note: Vercel will auto-update the blog posts every hour
 
 import Parser from 'rss-parser';
 
@@ -52,7 +49,7 @@ export default async function Page() {
 
   return (
     <main style={{ maxWidth: 700, margin: '2rem auto', padding: 24 }}>
-      <h1 style={{ fontSize: '2.5rem', fontWeight: 700 }}>Blog</h1>
+      <h1 style={{ fontSize: '2.5rem', fontWeight: 700, color: 'white' }}>Blog</h1>
 
       <div style={{ display: 'grid', gap: '2rem' }}>
         {posts.map(post => (
@@ -67,7 +64,7 @@ export default async function Page() {
               textDecoration: 'none',
               color: '#000',
               overflow: 'hidden',
-              background: '#f8f8f8',
+              background: '#f8f8f8', //this needs to be changed
               transition: 'transform 0.15s ease',
             }}
           >
