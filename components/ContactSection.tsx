@@ -61,7 +61,7 @@ export default function ContactSection() {
           textAlign: 'center',
         }}
       >
-        Don't want to use the form? Email me at groverneev at gmail.com or reach me at 408-604-558O.
+        Don't want to use the form? Email me at groverneev at gmail.com.
       </p>
 
       <form
