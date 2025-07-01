@@ -120,13 +120,16 @@ export default function ContactSection() {
             fontWeight: 600,
             cursor: 'pointer',
             transition: 'background 0.2s ease',
+            alignSelf: 'center',
+            width: 'fit-content',
+            minWidth: 160,
           }}
         >
           {status === 'sending' ? 'Sending…' : status === 'sent' ? 'Sent!' : 'Send Message'}
         </button>
 
         {status === 'sent' && (
-          <p style={{ color: '#22c55e', marginTop: 8 }}>Thanks! I’ll be in touch soon.</p>
+          <p style={{ color: '#22c55e', marginTop: 8 }}>Thanks! I'll be in touch soon.</p>
         )}
         {status === 'error' && (
           <p style={{ color: '#ef4444', marginTop: 8 }}>
