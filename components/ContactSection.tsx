@@ -122,7 +122,8 @@ export default function ContactSection() {
             transition: 'background 0.2s ease',
             alignSelf: 'center',
             width: 'fit-content',
-            minWidth: 160,
+            minWidth: 240, //use this to make the button wider
+            //command l to chat 
           }}
         >
           {status === 'sending' ? 'Sending…' : status === 'sent' ? 'Sent!' : 'Send Message'}
