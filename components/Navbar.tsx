@@ -1,11 +1,10 @@
-'use client';
-import { useState } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
-
+"use client";
+import { useState } from "react";
+import { useRouter, usePathname } from "next/navigation";
 
 const navLinks = [
-  { href: '/blog', label: 'Blog' },
-  { href: '/#contact', label: 'Contact' }, 
+  { href: "/blog", label: "Blog" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -14,35 +13,37 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav style={{
-      background: '#fff',
-      borderBottom: '1px solid #e5e7eb',
-      position: 'sticky',
-      top: 0,
-      zIndex: 50,
-      width: '100%',
-    }}>
+    <nav
+      style={{
+        background: "#fff",
+        borderBottom: "1px solid #e5e7eb",
+        position: "sticky",
+        top: 0,
+        zIndex: 50,
+        width: "100%",
+      }}
+    >
       <div
         style={{
           maxWidth: 1200,
-          margin: '0 auto',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          padding: '1rem 2rem',
-          position: 'relative'
+          margin: "0 auto",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "1rem 2rem",
+          position: "relative",
         }}
       >
         {/* Hamburger left (visible only on mobile) */}
         <button
           onClick={() => setOpen(!open)}
           style={{
-            background: 'none',
-            border: 'none',
+            background: "none",
+            border: "none",
             fontSize: 28,
-            cursor: 'pointer',
+            cursor: "pointer",
             marginRight: 16,
-            display: 'none',
+            display: "none",
           }}
           className="navbar-hamburger"
           aria-label="Open menu"
@@ -51,32 +52,41 @@ export default function Navbar() {
         </button>
 
         {/* Logo/title */}
-<a href="/" className="navbar-logo" style={{ fontWeight: 800, fontSize: 28, color: '#111', textDecoration: 'none' }}>
-  Neev Grover
-</a>
+        <a
+          href="/"
+          className="navbar-logo"
+          style={{
+            fontWeight: 800,
+            fontSize: 28,
+            color: "#111",
+            textDecoration: "none",
+          }}
+        >
+          Neev Grover
+        </a>
 
         {/* Main nav links - hidden on mobile */}
         <ul
           style={{
-            listStyle: 'none',
-            display: 'flex',
+            listStyle: "none",
+            display: "flex",
             gap: 32,
             margin: 0,
             padding: 0,
-            alignItems: 'center'
+            alignItems: "center",
           }}
           className="navbar-links"
         >
-          {navLinks.map(link => (
+          {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
                 style={{
-                  color: '#111',
-                  textDecoration: 'none',
+                  color: "#111",
+                  textDecoration: "none",
                   fontWeight: 500,
                   fontSize: 18,
-                  transition: 'color 0.2s'
+                  transition: "color 0.2s",
                 }}
               >
                 {link.label}
@@ -89,39 +99,44 @@ export default function Navbar() {
       {/* Sidebar drawer on mobile */}
       {open && (
         <div className="navbar-drawer" onClick={() => setOpen(false)}>
-          <div className="navbar-drawer-content" onClick={e => e.stopPropagation()}>
+          <div
+            className="navbar-drawer-content"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               onClick={() => setOpen(false)}
               style={{
-                background: 'none',
-                border: 'none',
+                background: "none",
+                border: "none",
                 fontSize: 28,
-                cursor: 'pointer',
+                cursor: "pointer",
                 marginBottom: 24,
-                alignSelf: 'flex-end'
+                alignSelf: "flex-end",
               }}
               aria-label="Close menu"
             >
               ×
             </button>
-            <ul style={{
-              listStyle: 'none',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 28,
-              padding: 0,
-              margin: 0,
-              alignItems: 'flex-start'
-            }}>
-              {navLinks.map(link => (
+            <ul
+              style={{
+                listStyle: "none",
+                display: "flex",
+                flexDirection: "column",
+                gap: 28,
+                padding: 0,
+                margin: 0,
+                alignItems: "flex-start",
+              }}
+            >
+              {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
                     style={{
-                      color: '#111',
-                      textDecoration: 'none',
+                      color: "#111",
+                      textDecoration: "none",
                       fontWeight: 500,
-                      fontSize: 22
+                      fontSize: 22,
                     }}
                     onClick={() => setOpen(false)}
                   >

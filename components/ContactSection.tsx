@@ -1,33 +1,35 @@
 // ContactSection.tsx – keeps user on page & recenters form with better side spacing
-'use client';
+"use client";
 
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent } from "react";
 
 export default function ContactSection() {
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
+    "idle"
+  );
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus('sending');
+    setStatus("sending");
 
     const form = e.currentTarget;
     const data = new FormData(form);
 
     try {
-      const response = await fetch('https://formspree.io/f/xnnvbrzq', {
-        method: 'POST',
-        headers: { Accept: 'application/json' },
+      const response = await fetch("https://formspree.io/f/xnnvbrzq", {
+        method: "POST",
+        headers: { Accept: "application/json" },
         body: data,
       });
 
       if (response.ok) {
         form.reset();
-        setStatus('sent');
+        setStatus("sent");
       } else {
-        setStatus('error');
+        setStatus("error");
       }
     } catch {
-      setStatus('error');
+      setStatus("error");
     }
   }
 
@@ -35,12 +37,12 @@ export default function ContactSection() {
     <section
       id="contact"
       style={{
-        background: '#0E1321',
-        color: '#f5f6fa',
-        padding: '5rem 6rem 6rem',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
+        background: "#0E1321",
+        color: "#f5f6fa",
+        padding: "5rem 6rem 6rem",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
       }}
     >
       <h2
@@ -48,17 +50,17 @@ export default function ContactSection() {
           fontWeight: 700,
           fontSize: 36,
           marginBottom: 8,
-          letterSpacing: '-0.03em',
+          letterSpacing: "-0.03em",
         }}
       >
         Contact Me
       </h2>
       <p
         style={{
-          color: '#9ca3af',
+          color: "#9ca3af",
           fontSize: 18,
           marginBottom: 32,
-          textAlign: 'center',
+          textAlign: "center",
         }}
       >
         Don't want to use the form? Email me at groverneev at gmail.com.
@@ -67,16 +69,16 @@ export default function ContactSection() {
       <form
         onSubmit={handleSubmit}
         style={{
-          background: '#0E1321',
+          background: "#0E1321",
           borderRadius: 16,
           padding: 32,
-          width: '100%',
+          width: "100%",
           maxWidth: 520,
-          margin: '0 auto',
-          display: 'flex',
-          flexDirection: 'column',
+          margin: "0 auto",
+          display: "flex",
+          flexDirection: "column",
           gap: 20,
-          boxSizing: 'border-box',
+          boxSizing: "border-box",
         }}
       >
         <label style={{ fontWeight: 500 }}>Name</label>
@@ -103,40 +105,40 @@ export default function ContactSection() {
           required
           placeholder="Write your message here..."
           rows={5}
-          style={{ ...inputStyle, resize: 'vertical' }}
+          style={{ ...inputStyle, resize: "vertical" }}
         />
 
         <button
           type="submit"
-          disabled={status === 'sending'}
+          disabled={status === "sending"}
           style={{
-            background: '#2563eb',
-            color: '#fff',
-            border: 'none',
+            background: "#2563eb",
+            color: "#fff",
+            border: "none",
             borderRadius: 12,
-            padding: '12px 0',
+            padding: "12px 0",
             fontSize: 16,
             fontWeight: 600,
-            cursor: 'pointer',
-            transition: 'background 0.2s ease',
-            alignSelf: 'stretch', // ⬅️ stretches to form width
-            width: '100%',        // ⬅️ matches input width
+            cursor: "pointer",
+            transition: "background 0.2s ease",
+            alignSelf: "stretch", // ⬅️ stretches to form width
+            width: "100%", // ⬅️ matches input width
           }}
         >
-          {status === 'sending'
-            ? 'Sending…'
-            : status === 'sent'
-            ? 'Sent!'
-            : 'Send Message'}
+          {status === "sending"
+            ? "Sending…"
+            : status === "sent"
+            ? "Sent!"
+            : "Send Message"}
         </button>
 
-        {status === 'sent' && (
-          <p style={{ color: '#22c55e', marginTop: 8 }}>
+        {status === "sent" && (
+          <p style={{ color: "#22c55e", marginTop: 8 }}>
             Thanks! I'll be in touch soon.
           </p>
         )}
-        {status === 'error' && (
-          <p style={{ color: '#ef4444', marginTop: 8 }}>
+        {status === "error" && (
+          <p style={{ color: "#ef4444", marginTop: 8 }}>
             Something went wrong. Please try again later.
           </p>
         )}
@@ -147,12 +149,12 @@ export default function ContactSection() {
 
 // ---- shared input style ----
 const inputStyle: React.CSSProperties = {
-  width: '100%',
-  padding: '12px 14px',
+  width: "100%",
+  padding: "12px 14px",
   borderRadius: 12,
-  border: '1px solid #334155',
-  background: '#1e2533',
-  color: '#f3f4f6',
+  border: "1px solid #334155",
+  background: "#1e2533",
+  color: "#f3f4f6",
   fontSize: 16,
-  outline: 'none',
+  outline: "none",
 };

@@ -3,7 +3,7 @@
 
 // Note: Vercel will auto-update the blog posts every hour
 
-import Parser from 'rss-parser';
+import Parser from "rss-parser";
 
 // Revalidate every 3600 s (1 h) → Incremental Static Regeneration
 export const revalidate = 3600;
@@ -20,9 +20,9 @@ type Post = {
 // ------------- data loader -------------
 async function fetchPosts(): Promise<Post[]> {
   const parser = new Parser();
-  const feed = await parser.parseURL('https://techunpacked.substack.com/feed');
+  const feed = await parser.parseURL("https://techunpacked.substack.com/feed");
 
-  return feed.items.map(item => {
+  return feed.items.map((item) => {
     // Attempt to get cover image from <enclosure> or first <img>
     let image: string | null = null;
     if (item.enclosure?.url) {
@@ -33,10 +33,10 @@ async function fetchPosts(): Promise<Post[]> {
     }
 
     return {
-      title: item.title ?? '',
-      link: item.link ?? '#',
-      content: item.contentSnippet ?? '',
-      pubDate: item.pubDate ?? '',
+      title: item.title ?? "",
+      link: item.link ?? "#",
+      content: item.contentSnippet ?? "",
+      pubDate: item.pubDate ?? "",
       image,
     };
   });
@@ -48,55 +48,57 @@ export default async function Page() {
   const posts = await fetchPosts();
 
   return (
-    <main style={{ maxWidth: 700, margin: '2rem auto', padding: 24 }}>
-      <h1 style={{ fontSize: '2.5rem', fontWeight: 700, color: 'white' }}>Blog</h1>
+    <main style={{ maxWidth: 700, margin: "2rem auto", padding: 24 }}>
+      <h1 style={{ fontSize: "2.5rem", fontWeight: 700, color: "white" }}>
+        Blog
+      </h1>
 
-      <div style={{ display: 'grid', gap: '2rem' }}>
-        {posts.map(post => (
+      <div style={{ display: "grid", gap: "2rem" }}>
+        {posts.map((post) => (
           <a
             key={post.link}
             href={post.link}
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              border: '1px solid #ccc',
+              border: "1px solid #ccc",
               borderRadius: 12,
-              textDecoration: 'none',
-              color: '#000',
-              overflow: 'hidden',
-              background: '#f8f8f8', //this needs to be changed
-              transition: 'transform 0.15s ease',
+              textDecoration: "none",
+              color: "#000",
+              overflow: "hidden",
+              background: "#f8f8f8", //this needs to be changed
+              transition: "transform 0.15s ease",
             }}
           >
             {post.image ? (
-              <div style={{ height: 200, overflow: 'hidden' }}>
+              <div style={{ height: 200, overflow: "hidden" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={post.image}
                   alt={post.title}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               </div>
             ) : (
               <div
                 style={{
                   height: 200,
-                  background: '#e2e2e2',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#666',
-                  fontStyle: 'italic',
+                  background: "#e2e2e2",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "#666",
+                  fontStyle: "italic",
                 }}
               >
                 No image available
               </div>
             )}
 
-            <div style={{ padding: '1rem' }}>
+            <div style={{ padding: "1rem" }}>
               <h2 style={{ marginTop: 0 }}>{post.title}</h2>
               <p style={{ marginTop: 8, marginBottom: 8 }}>{post.content}</p>
-              <small style={{ color: '#666' }}>
+              <small style={{ color: "#666" }}>
                 {new Date(post.pubDate).toLocaleDateString()}
               </small>
             </div>
