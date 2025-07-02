@@ -37,7 +37,7 @@ export default function ContactSection() {
       style={{
         background: '#0E1321',
         color: '#f5f6fa',
-        padding: '5rem 6rem 6rem', // increased side padding
+        padding: '5rem 6rem 6rem',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -69,11 +69,10 @@ export default function ContactSection() {
         style={{
           background: '#0E1321',
           borderRadius: 16,
-          //boxShadow: '0 6px 28px rgba(0,0,0,0.3)',
           padding: 32,
           width: '100%',
           maxWidth: 520,
-          margin: '0 auto', // centers & adds space on both sides
+          margin: '0 auto',
           display: 'flex',
           flexDirection: 'column',
           gap: 20,
@@ -111,7 +110,7 @@ export default function ContactSection() {
           type="submit"
           disabled={status === 'sending'}
           style={{
-            background: '#2563eb', //send message
+            background: '#2563eb',
             color: '#fff',
             border: 'none',
             borderRadius: 12,
@@ -120,17 +119,21 @@ export default function ContactSection() {
             fontWeight: 600,
             cursor: 'pointer',
             transition: 'background 0.2s ease',
-            alignSelf: 'center',
-            width: 'fit-content',
-            minWidth: 240, //use this to make the button wider
-            //command l to chat 
+            alignSelf: 'stretch', // ⬅️ stretches to form width
+            width: '100%',        // ⬅️ matches input width
           }}
         >
-          {status === 'sending' ? 'Sending…' : status === 'sent' ? 'Sent!' : 'Send Message'}
+          {status === 'sending'
+            ? 'Sending…'
+            : status === 'sent'
+            ? 'Sent!'
+            : 'Send Message'}
         </button>
 
         {status === 'sent' && (
-          <p style={{ color: '#22c55e', marginTop: 8 }}>Thanks! I'll be in touch soon.</p>
+          <p style={{ color: '#22c55e', marginTop: 8 }}>
+            Thanks! I'll be in touch soon.
+          </p>
         )}
         {status === 'error' && (
           <p style={{ color: '#ef4444', marginTop: 8 }}>
@@ -148,7 +151,7 @@ const inputStyle: React.CSSProperties = {
   padding: '12px 14px',
   borderRadius: 12,
   border: '1px solid #334155',
-  background: '#1e2533', //text box background
+  background: '#1e2533',
   color: '#f3f4f6',
   fontSize: 16,
   outline: 'none',
