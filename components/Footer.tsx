@@ -15,7 +15,7 @@ export default function Footer() {
         fontSize: 14,
       }}
     >
-      &copy; {new Date().getFullYear()} DuneBroom. All rights reserved.
+      &copy; {new Date().getFullYear()} Neev Grover. All rights reserved.
       <br />
       {/* Social Media Icons */}
       <div style={{ marginTop: 16 }}>
