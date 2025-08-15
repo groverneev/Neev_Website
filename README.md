@@ -22,4 +22,3 @@ It’s a place where I share my projects, blogs, and everything I’m building i
 ├── app/           # Main website code
 └── README.md      # You are here!
 ```
-
