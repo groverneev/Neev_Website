@@ -2,7 +2,6 @@ import { FaGithub } from "react-icons/fa";
 import { SiSubstack } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { FaBroom } from "react-icons/fa6"; // Importing the broom icon
 
 export default function Footer() {
   return (
@@ -60,14 +59,6 @@ export default function Footer() {
           <FaLinkedin size={23} />
         </a>
 
-        <a
-          href="https://www.dunebroom.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "#828893" }}
-        >
-          <FaBroom size={23} />
-        </a>
       </div>
     </footer>
   );

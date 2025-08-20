@@ -1,0 +1,154 @@
+'use client';
+
+import { FaBroom } from "react-icons/fa6";
+
+export default function ProjectsSection() {
+  return (
+    <section
+      id="projects"
+      style={{
+        padding: "6rem 2rem",
+        background: "#0E1321",
+        textAlign: "center",
+      }}
+    >
+      <h2
+        style={{
+          fontSize: 48,
+          fontWeight: 700,
+          color: "#fff",
+          marginBottom: "3rem",
+          letterSpacing: "-0.02em",
+        }}
+      >
+        Projects
+      </h2>
+      
+      <div
+        style={{
+          maxWidth: 1200,
+          margin: "0 auto",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
+          gap: "2rem",
+          padding: "0 1rem",
+        }}
+      >
+        {/* DuneBroom Project */}
+        <a
+          href="https://dunebroom.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            textDecoration: "none",
+            color: "inherit",
+            display: "block",
+          }}
+        >
+          <div
+            style={{
+              background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+              borderRadius: "20px",
+              padding: "2.5rem",
+              color: "#fff",
+              textAlign: "left",
+              transition: "all 0.3s ease",
+              boxShadow: "0 10px 30px rgba(102, 126, 234, 0.2)",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+              position: "relative",
+              overflow: "hidden",
+              cursor: "pointer",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-8px)";
+              e.currentTarget.style.boxShadow = "0 20px 40px rgba(102, 126, 234, 0.3)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 10px 30px rgba(102, 126, 234, 0.2)";
+            }}
+          >
+            {/* Background Pattern */}
+            <div
+              style={{
+                position: "absolute",
+                top: "-50%",
+                right: "-50%",
+                width: "200%",
+                height: "200%",
+                background: "radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)",
+                backgroundSize: "20px 20px",
+                opacity: 0.3,
+                zIndex: 0,
+              }}
+            />
+            
+            {/* Content */}
+            <div style={{ position: "relative", zIndex: 1 }}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "1rem",
+                  marginBottom: "1.5rem",
+                }}
+              >
+                <FaBroom size={32} />
+                <h3
+                  style={{
+                    fontSize: 28,
+                    fontWeight: 700,
+                    margin: 0,
+                    letterSpacing: "-0.01em",
+                  }}
+                >
+                  DuneBroom
+                </h3>
+              </div>
+              
+              <p
+                style={{
+                  fontSize: 16,
+                  lineHeight: 1.6,
+                  margin: 0,
+                  opacity: 0.9,
+                  maxWidth: "100%",
+                }}
+              >
+DuneBroom is a student-led robotics project dedicated to making a real-world impact for our beaches and our planet. Founded by Neev Grover, DuneBroom builds autonomous robots powered by edge AI to clean beaches.
+
+</p>
+              
+              <div
+                style={{
+                  marginTop: "1.5rem",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  opacity: 0.8,
+                  fontSize: 14,
+                  fontWeight: 500,
+                }}
+              >
+                <span>Learn More</span>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+  );
+}
