@@ -23,7 +23,7 @@ export default function ProjectsSection() {
       >
         Projects
       </h2>
-      
+
       <div
         style={{
           maxWidth: 1200,
@@ -82,7 +82,7 @@ export default function ProjectsSection() {
                 zIndex: 0,
               }}
             />
-            
+
             {/* Content */}
             <div style={{ position: "relative", zIndex: 1 }}>
               <div
@@ -105,7 +105,7 @@ export default function ProjectsSection() {
                   DuneBroom
                 </h3>
               </div>
-              
+
               <p
                 style={{
                   fontSize: 16,
@@ -115,10 +115,9 @@ export default function ProjectsSection() {
                   maxWidth: "100%",
                 }}
               >
-DuneBroom is a student-led robotics project dedicated to making a real-world impact for our beaches and our planet. Founded by Neev Grover, DuneBroom builds autonomous robots powered by edge AI to clean beaches.
+                DuneBroom is a student-led robotics project dedicated to making a real-world impact for our beaches and our planet. Founded by Neev Grover, DuneBroom builds autonomous robots powered by edge AI to clean beaches.
+              </p>
 
-</p>
-              
               <div
                 style={{
                   marginTop: "1.5rem",
