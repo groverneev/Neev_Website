@@ -45,27 +45,27 @@ export default function ProjectsSection() {
             display: "block",
           }}
         >
-          <div
-            style={{
-              background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-              borderRadius: "20px",
-              padding: "2.5rem",
-              color: "#fff",
-              textAlign: "left",
-              transition: "all 0.3s ease",
-              boxShadow: "0 10px 30px rgba(102, 126, 234, 0.2)",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              position: "relative",
-              overflow: "hidden",
-              cursor: "pointer",
-            }}
+                      <div
+              style={{
+                background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+                borderRadius: "20px",
+                padding: "2.5rem",
+                color: "#fff",
+                textAlign: "left",
+                transition: "all 0.3s ease",
+                boxShadow: "0 10px 30px rgba(15, 23, 42, 0.2)",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                position: "relative",
+                overflow: "hidden",
+                cursor: "pointer",
+              }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-8px)";
-              e.currentTarget.style.boxShadow = "0 20px 40px rgba(102, 126, 234, 0.3)";
+              e.currentTarget.style.boxShadow = "0 20px 40px rgba(15, 23, 42, 0.3)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow = "0 10px 30px rgba(102, 126, 234, 0.2)";
+              e.currentTarget.style.boxShadow = "0 10px 30px rgba(15, 23, 42, 0.2)";
             }}
           >
             {/* Background Pattern */}
