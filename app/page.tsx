@@ -1,16 +1,12 @@
-//npm install tailwindcss
-
-//tbd use tailwindcss and learn more about next js
+// Use npm install to install dependencies
 
 import Image from "next/image";
-import ContactSection from "@/components/ContactSection"; // ← make sure the path matches your project
-import ProjectsSection from "@/components/ProjectsSection"; // ← make sure the path matches your project
+import ContactSection from "@/components/ContactSection";
+import ProjectsSection from "@/components/ProjectsSection";
 import { FaGithub } from "react-icons/fa";
 import { SiSubstack } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-
-// npm install react-icons
 
 export default function Home() {
   return (
@@ -120,7 +116,7 @@ export default function Home() {
       {/* ───────── PROJECTS SECTION ───────── */}
       <ProjectsSection />
 
-      {/* ───────── CONTACT SECTION (new) ───────── */}
+      {/* ───────── CONTACT SECTION ───────── */}
       <ContactSection />
     </main>
   );
