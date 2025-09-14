@@ -115,8 +115,8 @@ export default function BlogSection() {
                   maxWidth: "100%",
                 }}
               >
-                Welcome to Tech Unpacked! I write periodical posts about
-                Technology, the Climate, and more. Subscribe to stay updated.
+                Want to understand the latest in technology? Read my blog for
+                guides, tips, and deep dives into all things tech!
               </p>
 
               <div
@@ -130,7 +130,7 @@ export default function BlogSection() {
                   fontWeight: 500,
                 }}
               >
-                <span>Learn More</span>
+                <span>Read my Blogs</span>
                 <svg
                   width="16"
                   height="16"
