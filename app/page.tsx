@@ -3,6 +3,7 @@
 import Image from "next/image";
 import ContactSection from "@/components/ContactSection";
 import ProjectsSection from "@/components/ProjectsSection";
+import BlogSection from "@/components/BlogSection";
 import { FaGithub } from "react-icons/fa";
 import { SiSubstack } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
@@ -112,6 +113,9 @@ export default function Home() {
           </a>
         </div>
       </section>
+
+      {/* ───────── BLOG SECTION ───────── */}
+      <BlogSection />
 
       {/* ───────── PROJECTS SECTION ───────── */}
       <ProjectsSection />
