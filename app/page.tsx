@@ -31,7 +31,7 @@ export default function Home() {
         <div style={{ flex: "none" }}>
           <Image
             src="/profile.png"
-            alt="Neev Grover, founder of DuneBroom"
+            alt="Neev Grover"
             width={140}
             height={140}
             style={{
