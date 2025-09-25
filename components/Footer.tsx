@@ -17,6 +17,19 @@ export default function Footer() {
     >
       &copy; {new Date().getFullYear()} Neev Grover. All rights reserved.
       <br />
+      <a
+        href="/privacy-policy"
+        style={{
+          color: "#828893",
+          textDecoration: "none",
+          fontSize: "14px",
+          marginTop: "8px",
+          display: "inline-block",
+        }}
+      >
+        Privacy Policy
+      </a>
+      <br />
       {/* Social Media Icons */}
       <div style={{ marginTop: 16 }}>
         {/* GitHub */}
