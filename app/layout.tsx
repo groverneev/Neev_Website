@@ -6,9 +6,9 @@ export const metadata = {
   title: "Neev Grover",
   description: "Personal site for Neev Grover",
   icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
 };
 

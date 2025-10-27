@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
           padding: "6rem 2rem",
           background: "#0E1321",
           textAlign: "center",
-          minHeight: "80vh",
+          minHeight: "10vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -37,16 +37,18 @@ export default function PrivacyPolicy() {
           <p style={{ marginBottom: "1.5rem" }}>
             Your privacy is important to us. We do not collect any personal data
             through this website or through our Weather 360 app. We do not use
-            cookies, tracking pixels, or any third-party services that collect data.
+            cookies, tracking pixels, or any third-party services that collect
+            data.
           </p>
           <p style={{ marginBottom: "1.5rem" }}>
-            Any data you voluntarily provide through contact forms or email will be
-            used solely for the purpose of responding to your inquiry and will not
-            be shared with third parties.
+            Any data you voluntarily provide through contact forms or email will
+            be used solely for the purpose of responding to your inquiry and
+            will not be shared with third parties.
           </p>
           <p style={{ marginBottom: "1.5rem" }}>
-            By using this website or our app, you agree to this privacy policy. 
-            If you have any questions or concerns about your privacy, please contact us.
+            By using this website or our app, you agree to this privacy policy.
+            If you have any questions or concerns about your privacy, please
+            contact us.
           </p>
         </div>
       </section>

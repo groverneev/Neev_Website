@@ -15,8 +15,7 @@ export default function Footer() {
         fontSize: 14,
       }}
     >
-      &copy; {new Date().getFullYear()} Neev Grover. All rights reserved.
-      <br />
+      &copy; {new Date().getFullYear()} Neev Grover. All rights reserved.{" "}
       <a
         href="/privacy-policy"
         style={{
@@ -29,7 +28,6 @@ export default function Footer() {
       >
         Privacy Policy
       </a>
-      <br />
       {/* Social Media Icons */}
       <div style={{ marginTop: 16 }}>
         {/* GitHub */}
@@ -54,7 +52,7 @@ export default function Footer() {
 
         {/* X */}
         <a
-          href="https://x.com/lightningpro535"
+          href="https://x.com/groverneev01"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: "#828893", margin: "0 12px" }}
@@ -71,7 +69,6 @@ export default function Footer() {
         >
           <FaLinkedin size={23} />
         </a>
-
       </div>
     </footer>
   );
