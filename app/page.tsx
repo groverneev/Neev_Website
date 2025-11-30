@@ -104,7 +104,7 @@ export default function Home() {
 
           {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/in/neev-grover-3bb873332/"
+            href="https://www.linkedin.com/in/neev-grover/"
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: "#fff" }}

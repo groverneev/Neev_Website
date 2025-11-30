@@ -62,7 +62,7 @@ export default function Footer() {
 
         {/* LinkedIn */}
         <a
-          href="https://www.linkedin.com/in/neev-grover-3bb873332/"
+          href="https://www.linkedin.com/in/neev-grover/"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: "#828893", margin: "0 12px" }}
