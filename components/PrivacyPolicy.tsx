@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
         >
           <p style={{ marginBottom: "1.5rem" }}>
             Your privacy is important to us. We do not collect any personal data
-            through this website or through our Weather 360 app. We do not use
+            through this website or through our Weather 365 app. We do not use
             cookies, tracking pixels, or any third-party services that collect
             data.
           </p>
