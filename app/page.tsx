@@ -1,5 +1,3 @@
-// Use npm install to install dependencies
-
 import Image from "next/image";
 import ContactSection from "@/components/ContactSection";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -59,9 +57,9 @@ export default function Home() {
           Sophomore at the Harker School
         </h2>
         <p style={{ fontSize: 22, maxWidth: 600, margin: "0 auto 2rem auto" }}>
-          Neev is passionate about Computer Science, Chess, and the Environment. He enjoys
-          building projects, playing competitive chess, and writing about
-          technology on his blog.
+          Neev is passionate about Computer Science, Chess, and the Environment.
+          He enjoys building projects, playing competitive chess, and writing
+          about technology on his blog.
         </p>
 
         <div
@@ -118,7 +116,7 @@ export default function Home() {
       <BlogSection />
 
       {/* ───────── PROJECTS SECTION ───────── */}
-      {/*     <ProjectsSection />              */}
+      <ProjectsSection />
 
       {/* ───────── CONTACT SECTION ───────── */}
       <ContactSection />

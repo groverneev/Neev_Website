@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { FaBroom } from "react-icons/fa6";
 
@@ -34,7 +34,125 @@ export default function ProjectsSection() {
           padding: "0 1rem",
         }}
       >
-        {/* DuneBroom Project */}
+        {/* College Statistics */}
+        <a
+          href="https://collegestatistics.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            textDecoration: "none",
+            color: "inherit",
+            display: "block",
+          }}
+        >
+          <div
+            style={{
+              background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+              borderRadius: "20px",
+              padding: "2.5rem",
+              color: "#fff",
+              textAlign: "left",
+              transition: "all 0.3s ease",
+              boxShadow: "0 10px 30px rgba(15, 23, 42, 0.2)",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+              position: "relative",
+              overflow: "hidden",
+              cursor: "pointer",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-8px)";
+              e.currentTarget.style.boxShadow =
+                "0 20px 40px rgba(15, 23, 42, 0.3)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow =
+                "0 10px 30px rgba(15, 23, 42, 0.2)";
+            }}
+          >
+            {/* Background Pattern */}
+            <div
+              style={{
+                position: "absolute",
+                top: "-50%",
+                right: "-50%",
+                width: "200%",
+                height: "200%",
+                background:
+                  "radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)",
+                backgroundSize: "20px 20px",
+                opacity: 0.3,
+                zIndex: 0,
+              }}
+            />
+
+            {/* Content */}
+            <div style={{ position: "relative", zIndex: 1 }}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "1rem",
+                  marginBottom: "1.5rem",
+                }}
+              >
+                <h3
+                  style={{
+                    fontSize: 28,
+                    fontWeight: 700,
+                    margin: 0,
+                    letterSpacing: "-0.01em",
+                  }}
+                >
+                  College Statistics
+                </h3>
+              </div>
+
+              <p
+                style={{
+                  fontSize: 16,
+                  lineHeight: 1.6,
+                  margin: 0,
+                  opacity: 0.9,
+                  maxWidth: "100%",
+                }}
+              >
+                A data visualization dashboard for comparing colleges using
+                Common Data Set (CDS) metrics. View historical trends for
+                admissions, test scores, costs, financial aid, and demographics.
+              </p>
+
+              <div
+                style={{
+                  marginTop: "1.5rem",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  opacity: 0.8,
+                  fontSize: 14,
+                  fontWeight: 500,
+                }}
+              >
+                <span>Learn More About College Statistics</span>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        {/* DuneBroom Project 
         <a
           href="https://dunebroom.com"
           target="_blank"
@@ -68,7 +186,6 @@ export default function ProjectsSection() {
               e.currentTarget.style.boxShadow = "0 10px 30px rgba(15, 23, 42, 0.2)";
             }}
           >
-            {/* Background Pattern */}
             <div
               style={{
                 position: "absolute",
@@ -83,7 +200,6 @@ export default function ProjectsSection() {
               }}
             />
 
-            {/* Content */}
             <div style={{ position: "relative", zIndex: 1 }}>
               <div
                 style={{
@@ -147,6 +263,7 @@ export default function ProjectsSection() {
             </div>
           </div>
         </a>
+*/}
       </div>
     </section>
   );
