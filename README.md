@@ -1,24 +1,61 @@
-# 🌐 Neev Grover — Personal Website
+# Neev Grover — Personal Website
 
-Welcome to the codebase for **[neevgrover.com](https://neevgrover.com)** — my personal website.  
-It’s a place where I share my projects, blogs, and everything I’m building in tech.
+Source code for **[neevgrover.com](https://neevgrover.com)** — a personal website showcasing projects, blog posts, and contact info.
 
----
+## Tech Stack
 
-## ✨ About Me
+- **Next.js 16** (App Router, Turbopack)
+- **React 19** with TypeScript
+- **Tailwind CSS v4** (via PostCSS)
+- **react-icons** for social/project icons
+- **rss-parser** for fetching Substack blog posts
+- Deployed on **Vercel**
 
-- ♟ **Chess** — USCF ~1800, Chess.com ~2100, tournament player since age 5
-- 🖨 **DuneBroom** — Creator of **[dunebroom](https://dunebroom.com)**, an autonomous beach-cleaning robot
-- 💻 **Programming** — Primarily in Python, Java, and TypeScript; exploring ML, AI safety, and red teaming
-- 📚 **Writer** — Weekly blog at [Tech Unpacked](https://techunpacked.substack.com)
+## Getting Started
 
----
-
-## 📂 Website Structure
-
-```plaintext
-/
-├── public/        # Static assets (images, icons, etc.)
-├── app/           # Main website code
-└── README.md      # You are here!
+```bash
+npm install
+npm run dev
 ```
+
+Open [http://localhost:3000](http://localhost:3000) to view the site.
+
+## Project Structure
+
+```
+app/
+  layout.tsx            Root layout (Navbar + Footer)
+  page.tsx              Homepage (Hero, Blog, Projects, Contact)
+  globals.css           Global styles
+  blog/page.tsx         Blog page (fetches Substack RSS feed via ISR)
+  privacy-policy/       Privacy policy page
+  not-found.tsx         Custom 404
+
+components/
+  Navbar.tsx            Sticky nav with mobile drawer
+  Footer.tsx            Footer with social links
+  BlogSection.tsx       Blog preview card for homepage
+  ProjectsSection.tsx   Projects grid for homepage
+  ContactSection.tsx    Contact form (Formspree)
+  PrivacyPolicy.tsx     Privacy policy content
+
+public/
+  favicon.svg           Site favicon
+  profile.png           Profile photo
+```
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server (Turbopack) |
+| `npm run build` | Production build |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
+
+## About
+
+- Chess — USCF ~1800, Chess.com ~2100
+- [DuneBroom](https://dunebroom.com) — Autonomous beach-cleaning robot
+- [Tech Unpacked](https://techunpacked.substack.com) — Weekly tech blog
+- [College Statistics](https://collegestatistics.org) — College data visualization dashboard
