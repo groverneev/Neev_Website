@@ -210,18 +210,16 @@ export default function Footer() {
           <p style={{ color: "#828893", fontSize: 14, margin: 0 }}>
             &copy; {new Date().getFullYear()} Neev Grover. All rights reserved.
           </p>
-          <a
-            href="/privacy-policy"
+          <p
             style={{
               color: "#828893",
               fontSize: 12,
               margin: 0,
               opacity: 0.7,
-              textDecoration: "none",
             }}
           >
-            Privacy Policy
-          </a>
+            Crafted with curiosity and too much caffeine.
+          </p>
         </div>
       </div>
 
