@@ -4,7 +4,7 @@ export default function PrivacyPolicy() {
   const sectionHeadingStyle: React.CSSProperties = {
     fontSize: 22,
     fontWeight: 700,
-    color: "#111",
+    color: "#fff",
     marginTop: 40,
     marginBottom: 12,
   };
@@ -12,12 +12,20 @@ export default function PrivacyPolicy() {
   const paragraphStyle: React.CSSProperties = {
     fontSize: 16,
     lineHeight: 1.75,
-    color: "#444",
+    color: "#a0a6b2",
     marginBottom: 16,
   };
 
+  const subHeadingStyle: React.CSSProperties = {
+    fontSize: 17,
+    fontWeight: 600,
+    color: "#cdd1da",
+    marginBottom: 8,
+    marginTop: 20,
+  };
+
   return (
-    <main style={{ background: "#f5f6fa", fontFamily: "Inter, sans-serif" }}>
+    <main style={{ background: "#0E1321", fontFamily: "Inter, sans-serif" }}>
       {/* Hero Banner */}
       <section
         style={{
@@ -53,15 +61,15 @@ export default function PrivacyPolicy() {
         style={{
           maxWidth: 800,
           margin: "0 auto",
-          padding: "48px 2rem 80px",
+          padding: "0 2rem 80px",
         }}
       >
         <div
           style={{
-            background: "#fff",
+            background: "#151a2b",
             borderRadius: 12,
             padding: "48px 40px",
-            boxShadow: "0 1px 4px rgba(0,0,0,0.06)",
+            border: "1px solid #1a2035",
           }}
         >
           {/* Introduction */}
@@ -77,17 +85,7 @@ export default function PrivacyPolicy() {
 
           {/* Information We Collect */}
           <h2 style={sectionHeadingStyle}>Information We Collect</h2>
-          <h3
-            style={{
-              fontSize: 17,
-              fontWeight: 600,
-              color: "#222",
-              marginBottom: 8,
-              marginTop: 20,
-            }}
-          >
-            Website
-          </h3>
+          <h3 style={subHeadingStyle}>Website</h3>
           <p style={paragraphStyle}>
             The Website does not require you to create an account or provide any
             personal information to browse its content. If you choose to use the
@@ -95,17 +93,7 @@ export default function PrivacyPolicy() {
             as your name, email address, and message. This data is processed
             through Formspree, a third-party form handling service.
           </p>
-          <h3
-            style={{
-              fontSize: 17,
-              fontWeight: 600,
-              color: "#222",
-              marginBottom: 8,
-              marginTop: 20,
-            }}
-          >
-            Weather 365 App
-          </h3>
+          <h3 style={subHeadingStyle}>Weather 365 App</h3>
           <p style={paragraphStyle}>
             Weather 365 does not collect, store, or transmit any personal data.
             The App fetches weather data based on your device&apos;s location to
@@ -136,20 +124,22 @@ export default function PrivacyPolicy() {
             }}
           >
             <li style={{ marginBottom: 8 }}>
-              <strong>Formspree</strong> — Handles contact form submissions on
-              the Website. Formspree may store your submitted data in accordance
-              with their own privacy policy.
+              <strong style={{ color: "#cdd1da" }}>Formspree</strong> — Handles
+              contact form submissions on the Website. Formspree may store your
+              submitted data in accordance with their own privacy policy.
             </li>
             <li style={{ marginBottom: 8 }}>
-              <strong>Vercel</strong> — Hosts the Website. Vercel may collect
-              standard server logs (such as IP addresses and access times) as
-              part of normal web hosting operations.
+              <strong style={{ color: "#cdd1da" }}>Vercel</strong> — Hosts the
+              Website. Vercel may collect standard server logs (such as IP
+              addresses and access times) as part of normal web hosting
+              operations.
             </li>
             <li style={{ marginBottom: 8 }}>
-              <strong>Weather Data Provider</strong> — Weather 365 fetches
-              forecast data from a third-party weather API. Only your
-              approximate location is sent to retrieve local weather information;
-              no personally identifiable information is transmitted.
+              <strong style={{ color: "#cdd1da" }}>Weather Data Provider</strong>{" "}
+              — Weather 365 fetches forecast data from a third-party weather
+              API. Only your approximate location is sent to retrieve local
+              weather information; no personally identifiable information is
+              transmitted.
             </li>
           </ul>
 
@@ -193,14 +183,7 @@ export default function PrivacyPolicy() {
           <h2 style={sectionHeadingStyle}>Contact Us</h2>
           <p style={{ ...paragraphStyle, marginBottom: 0 }}>
             If you have any questions or concerns about this Privacy Policy,
-            please reach out to us at{" "}
-            <a
-              href="mailto:groverneev@gmail.com"
-              style={{ color: "#2563eb", textDecoration: "none" }}
-            >
-              groverneev@gmail.com
-            </a>
-            .
+            please reach out to us.
           </p>
         </div>
       </section>
