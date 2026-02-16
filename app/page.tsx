@@ -70,6 +70,16 @@ export default function Home() {
             marginBottom: 32,
           }}
         >
+          {/* X */}
+          <a
+            href="https://x.com/groverneev01"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#fff" }}
+          >
+            <FaXTwitter size={37} />
+          </a>
+
           {/* GitHub */}
           <a
             href="https://github.com/groverneev"
@@ -88,16 +98,6 @@ export default function Home() {
             style={{ color: "#fff" }}
           >
             <SiSubstack size={37} />
-          </a>
-
-          {/* X */}
-          <a
-            href="https://x.com/groverneev01"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "#fff" }}
-          >
-            <FaXTwitter size={37} />
           </a>
 
           {/* LinkedIn */}
