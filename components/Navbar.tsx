@@ -3,8 +3,9 @@ import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 
 const navLinks = [
-  { href: "/blog", label: "Blog" },
-  { href: "/#contact", label: "Contact" },
+  { href: "https://techunpacked.substack.com", label: "Blog", external: true },
+  { href: "/#projects", label: "Projects", external: false },
+  { href: "/#contact", label: "Contact", external: false },
 ];
 
 export default function Navbar() {
@@ -81,6 +82,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
+                {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 style={{
                   color: "#111",
                   textDecoration: "none",
@@ -132,6 +134,7 @@ export default function Navbar() {
                 <li key={link.href}>
                   <a
                     href={link.href}
+                    {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     style={{
                       color: "#111",
                       textDecoration: "none",
