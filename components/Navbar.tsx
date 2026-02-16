@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "https://techunpacked.substack.com", label: "Blog", external: true },
@@ -9,8 +9,7 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
-  const router = useRouter();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
   return (
@@ -28,176 +27,175 @@ export default function Navbar() {
         style={{
           maxWidth: 1200,
           margin: "0 auto",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "1rem 2rem",
-          position: "relative",
+          padding: "0 2rem",
         }}
       >
-        {/* Hamburger left (visible only on mobile) */}
-        <button
-          onClick={() => setOpen(!open)}
+        <div
           style={{
-            background: "none",
-            border: "none",
-            fontSize: 28,
-            cursor: "pointer",
-            marginRight: 16,
-            display: "none",
-          }}
-          className="navbar-hamburger"
-          aria-label="Open menu"
-        >
-          ☰
-        </button>
-
-        {/* Logo/title */}
-        <a
-          href="/"
-          className="navbar-logo"
-          style={{
-            fontWeight: 800,
-            fontSize: 28,
-            color: "#111",
-            textDecoration: "none",
-          }}
-        >
-          Neev Grover
-        </a>
-
-        {/* Main nav links - hidden on mobile */}
-        <ul
-          style={{
-            listStyle: "none",
             display: "flex",
-            gap: 32,
-            margin: 0,
-            padding: 0,
             alignItems: "center",
+            justifyContent: "space-between",
+            height: 64,
           }}
-          className="navbar-links"
         >
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                style={{
-                  color: "#111",
-                  textDecoration: "none",
-                  fontWeight: 500,
-                  fontSize: 18,
-                  transition: "color 0.2s",
-                }}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Sidebar drawer on mobile */}
-      {open && (
-        <div className="navbar-drawer" onClick={() => setOpen(false)}>
-          <div
-            className="navbar-drawer-content"
-            onClick={(e) => e.stopPropagation()}
+          {/* Logo/title */}
+          <a
+            href="/"
+            style={{
+              fontWeight: 800,
+              fontSize: 28,
+              color: "#111",
+              textDecoration: "none",
+            }}
           >
-            <button
-              onClick={() => setOpen(false)}
+            Neev Grover
+          </a>
+
+          {/* Desktop nav links */}
+          <ul
+            className="navbar-desktop"
+            style={{
+              listStyle: "none",
+              display: "flex",
+              gap: 32,
+              margin: 0,
+              padding: 0,
+              alignItems: "center",
+            }}
+          >
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  {...(link.external
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
+                  style={{
+                    color: "#111",
+                    textDecoration: "none",
+                    fontWeight: 500,
+                    fontSize: 18,
+                    transition: "color 0.2s",
+                  }}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          {/* Mobile hamburger / close button */}
+          <button
+            className="navbar-mobile-toggle"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+            style={{
+              display: "none",
+              padding: 8,
+              borderRadius: 6,
+              background: "none",
+              border: "none",
+              color: "#111",
+              cursor: "pointer",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            {mobileMenuOpen ? (
+              <svg
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
+          </button>
+        </div>
+
+        {/* Mobile dropdown menu */}
+        {mobileMenuOpen && (
+          <div
+            className="navbar-mobile-menu"
+            style={{
+              borderTop: "1px solid #e5e7eb",
+              paddingTop: 16,
+              paddingBottom: 16,
+              display: "none",
+            }}
+          >
+            <nav
               style={{
-                background: "none",
-                border: "none",
-                fontSize: 28,
-                cursor: "pointer",
-                marginBottom: 24,
-                alignSelf: "flex-end",
-              }}
-              aria-label="Close menu"
-            >
-              ×
-            </button>
-            <ul
-              style={{
-                listStyle: "none",
                 display: "flex",
                 flexDirection: "column",
-                gap: 28,
-                padding: 0,
-                margin: 0,
-                alignItems: "flex-start",
+                gap: 4,
               }}
             >
               {navLinks.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                    style={{
-                      color: "#111",
-                      textDecoration: "none",
-                      fontWeight: 500,
-                      fontSize: 22,
-                    }}
-                    onClick={() => setOpen(false)}
-                  >
-                    {link.label}
-                  </a>
-                </li>
+                <a
+                  key={link.href}
+                  href={link.href}
+                  {...(link.external
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
+                  onClick={() => setMobileMenuOpen(false)}
+                  style={{
+                    color: "#111",
+                    textDecoration: "none",
+                    fontWeight: 500,
+                    fontSize: 16,
+                    padding: "8px 8px",
+                    borderRadius: 6,
+                    transition: "background-color 0.2s",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.backgroundColor = "#f5f6fa")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.backgroundColor = "transparent")
+                  }
+                >
+                  {link.label}
+                </a>
               ))}
-            </ul>
+            </nav>
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
-      {/* CSS for responsive behavior */}
       <style>{`
         @media (max-width: 900px) {
-         .navbar-logo {
-      position: absolute;
-      left: 0;
-      right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    width: fit-content;
-  }
-  .navbar-hamburger {
-    position: relative;
-    z-index: 2;
-  }
-}
-
-        @media (max-width: 900px) {
-          .navbar-links {
+          .navbar-desktop {
             display: none !important;
           }
-          .navbar-hamburger {
+          .navbar-mobile-toggle {
+            display: flex !important;
+          }
+          .navbar-mobile-menu {
             display: block !important;
           }
-        }
-        .navbar-drawer {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          height: 100vh;
-          background: rgba(0,0,0,0.33);
-          z-index: 1000;
-          display: flex;
-          align-items: flex-start;
-        }
-        .navbar-drawer-content {
-          background: #fff;
-          width: 85vw;
-          max-width: 320px;
-          min-height: 100vh;
-          box-shadow: 2px 0 16px rgba(0,0,0,0.1);
-          display: flex;
-          flex-direction: column;
-          padding: 2.2rem 2rem 1.2rem 1.3rem;
         }
       `}</style>
     </nav>
