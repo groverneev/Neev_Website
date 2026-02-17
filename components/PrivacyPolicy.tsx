@@ -25,12 +25,12 @@ export default function PrivacyPolicy() {
   };
 
   return (
-    <main style={{ background: "#0E1321", fontFamily: "Inter, sans-serif" }}>
+    <main style={{ background: "#0f1117", fontFamily: "Inter, sans-serif" }}>
       {/* Hero Banner */}
       <section
         style={{
           padding: "5rem 2rem 3rem",
-          background: "#0E1321",
+          background: "#0f1117",
           textAlign: "center",
         }}
       >
@@ -66,10 +66,10 @@ export default function PrivacyPolicy() {
       >
         <div
           style={{
-            background: "#151a2b",
+            background: "#161b27",
             borderRadius: 12,
             padding: "48px 40px",
-            border: "1px solid #1a2035",
+            border: "1px solid #252d3d",
           }}
         >
           {/* Introduction */}
