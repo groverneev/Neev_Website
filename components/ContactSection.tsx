@@ -49,7 +49,7 @@ export default function ContactSection() {
     <section
       id="contact"
       style={{
-        background: "#0E1321",
+        background: "#0f1117",
         padding: "4rem 1rem 5rem",
       }}
     >
@@ -87,8 +87,8 @@ export default function ContactSection() {
       >
         <div
           style={{
-            background: "#151a2b",
-            border: "1px solid #1a2035",
+            background: "#161b27",
+            border: "1px solid #252d3d",
             borderRadius: 12,
             padding: "2rem",
           }}
@@ -108,8 +108,8 @@ export default function ContactSection() {
           {status === "success" ? (
             <div
               style={{
-                background: "#1a2035",
-                border: "1px solid #1a2035",
+                background: "#1e2433",
+                border: "1px solid #252d3d",
                 borderRadius: 8,
                 padding: "1.5rem 1rem",
                 textAlign: "center",
@@ -306,8 +306,8 @@ const inputStyle: React.CSSProperties = {
   width: "100%",
   padding: "12px 14px",
   borderRadius: 8,
-  border: "1px solid #1a2035",
-  background: "#1a2035",
+  border: "1px solid #252d3d",
+  background: "#1e2433",
   color: "#f3f4f6",
   fontSize: 16,
   outline: "none",

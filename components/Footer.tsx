@@ -54,8 +54,8 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: "#0e1321",
-        borderTop: "1px solid #1a2035",
+        background: "#0f1117",
+        borderTop: "1px solid #252d3d",
         color: "#fff",
       }}
     >
@@ -197,7 +197,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div
           style={{
-            borderTop: "1px solid #1a2035",
+            borderTop: "1px solid #252d3d",
             marginTop: 32,
             paddingTop: 32,
             display: "flex",

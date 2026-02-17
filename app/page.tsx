@@ -19,7 +19,7 @@ export default function Home() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          background: "#0E1321",
+          background: "#0f1117",
           color: "#fff",
           textAlign: "center",
           padding: "0 2rem",
@@ -77,7 +77,7 @@ export default function Home() {
             rel="noopener noreferrer"
             style={{ color: "#fff" }}
           >
-            <FaXTwitter size={37} />
+            <FaXTwitter size={28} />
           </a>
 
           {/* GitHub */}
@@ -87,7 +87,7 @@ export default function Home() {
             rel="noopener noreferrer"
             style={{ color: "#fff" }}
           >
-            <FaGithub size={37} />
+            <FaGithub size={28} />
           </a>
 
           {/* Substack */}
@@ -97,7 +97,7 @@ export default function Home() {
             rel="noopener noreferrer"
             style={{ color: "#fff" }}
           >
-            <SiSubstack size={37} />
+            <SiSubstack size={28} />
           </a>
 
           {/* LinkedIn */}
@@ -107,7 +107,7 @@ export default function Home() {
             rel="noopener noreferrer"
             style={{ color: "#fff" }}
           >
-            <FaLinkedin size={37} />
+            <FaLinkedin size={28} />
           </a>
         </div>
       </section>
