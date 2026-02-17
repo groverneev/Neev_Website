@@ -1,12 +1,14 @@
 "use client";
 
+import { SiSubstack } from "react-icons/si";
+
 export default function BlogSection() {
   return (
     <section
-      id="projects"
+      id="blog"
       style={{
         padding: "6rem 2rem",
-        background: "#0E1321",
+        background: "#0a0e1a",
         textAlign: "center",
       }}
     >
@@ -19,20 +21,16 @@ export default function BlogSection() {
           letterSpacing: "-0.02em",
         }}
       >
-        Blogs
+        Blog
       </h2>
 
       <div
         style={{
           maxWidth: 1200,
           margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
-          gap: "2rem",
           padding: "0 1rem",
         }}
       >
-        {/* DuneBroom Project */}
         <a
           href="https://techunpacked.substack.com"
           target="_blank"
@@ -45,105 +43,159 @@ export default function BlogSection() {
         >
           <div
             style={{
-              background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+              background:
+                "linear-gradient(135deg, #0f0a00 0%, #1a1005 50%, #0f1520 100%)",
               borderRadius: "20px",
-              padding: "2.5rem",
+              padding: "3rem",
               color: "#fff",
               textAlign: "left",
               transition: "all 0.3s ease",
-              boxShadow: "0 10px 30px rgba(15, 23, 42, 0.2)",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
+              boxShadow: "0 10px 30px rgba(255, 103, 25, 0.08)",
+              border: "1px solid rgba(255, 103, 25, 0.2)",
+              borderTop: "4px solid #ff6719",
               position: "relative",
               overflow: "hidden",
               cursor: "pointer",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-8px)";
+              e.currentTarget.style.transform = "translateY(-6px)";
               e.currentTarget.style.boxShadow =
-                "0 20px 40px rgba(15, 23, 42, 0.3)";
+                "0 20px 40px rgba(255, 103, 25, 0.15)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "translateY(0)";
               e.currentTarget.style.boxShadow =
-                "0 10px 30px rgba(15, 23, 42, 0.2)";
+                "0 10px 30px rgba(255, 103, 25, 0.08)";
             }}
           >
-            {/* Background Pattern */}
+            {/* Background glow */}
             <div
               style={{
                 position: "absolute",
-                top: "-50%",
-                right: "-50%",
-                width: "200%",
-                height: "200%",
+                top: "-80px",
+                right: "-80px",
+                width: "300px",
+                height: "300px",
                 background:
-                  "radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)",
-                backgroundSize: "20px 20px",
-                opacity: 0.3,
+                  "radial-gradient(circle, rgba(255, 103, 25, 0.12) 0%, transparent 70%)",
                 zIndex: 0,
               }}
             />
 
             {/* Content */}
-            <div style={{ position: "relative", zIndex: 1 }}>
+            <div
+              style={{
+                position: "relative",
+                zIndex: 1,
+                display: "flex",
+                flexDirection: "column",
+                gap: "1.25rem",
+              }}
+            >
+              {/* Top row: icon + newsletter tag */}
               <div
                 style={{
                   display: "flex",
                   alignItems: "center",
+                  justifyContent: "space-between",
+                  flexWrap: "wrap",
                   gap: "1rem",
-                  marginBottom: "1.5rem",
                 }}
               >
-                <h3
+                <div
                   style={{
-                    fontSize: 28,
-                    fontWeight: 700,
-                    margin: 0,
-                    letterSpacing: "-0.01em",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.75rem",
                   }}
                 >
-                  Tech Unpacked
-                </h3>
+                  <div
+                    style={{
+                      background: "rgba(255, 103, 25, 0.15)",
+                      borderRadius: "12px",
+                      padding: "0.6rem",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <SiSubstack size={28} color="#ff6719" />
+                  </div>
+                  <h3
+                    style={{
+                      fontSize: 32,
+                      fontWeight: 700,
+                      margin: 0,
+                      letterSpacing: "-0.02em",
+                    }}
+                  >
+                    Tech Unpacked
+                  </h3>
+                </div>
+
+                {/* Newsletter tag */}
+                <span
+                  style={{
+                    background: "rgba(255, 103, 25, 0.15)",
+                    border: "1px solid rgba(255, 103, 25, 0.4)",
+                    color: "#ff6719",
+                    borderRadius: "999px",
+                    padding: "0.3rem 0.9rem",
+                    fontSize: 13,
+                    fontWeight: 600,
+                    letterSpacing: "0.04em",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Newsletter
+                </span>
               </div>
 
               <p
                 style={{
-                  fontSize: 16,
-                  lineHeight: 1.6,
+                  fontSize: 17,
+                  lineHeight: 1.7,
                   margin: 0,
-                  opacity: 0.9,
-                  maxWidth: "100%",
+                  color: "rgba(255,255,255,0.8)",
+                  maxWidth: "680px",
                 }}
               >
-                Want to understand the latest in technology? Read my blog for
-                guides, tips, and deep dives into all things tech!
+                Guides, deep dives, and explainers on the latest in technology —
+                from AI and robotics to software and beyond.
               </p>
 
-              <div
-                style={{
-                  marginTop: "1.5rem",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.5rem",
-                  opacity: 0.8,
-                  fontSize: 14,
-                  fontWeight: 500,
-                }}
-              >
-                <span>Read my Blogs</span>
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+              {/* CTA button */}
+              <div>
+                <span
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                    background: "#ff6719",
+                    color: "#fff",
+                    fontWeight: 600,
+                    fontSize: 15,
+                    borderRadius: "10px",
+                    padding: "0.65rem 1.4rem",
+                    marginTop: "0.5rem",
+                    transition: "background 0.2s ease",
+                  }}
                 >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
+                  Read on Substack
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </span>
               </div>
             </div>
           </div>

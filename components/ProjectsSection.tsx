@@ -1,6 +1,61 @@
 "use client";
 
-import { FaBroom } from "react-icons/fa6";
+import { FaBroom, FaLeaf, FaChartBar, FaHandshake } from "react-icons/fa6";
+
+const projects = [
+  {
+    href: "https://earthdayartcontest.vercel.app",
+    accent: "#22c55e",
+    gradient: "linear-gradient(135deg, #052e16 0%, #14532d 100%)",
+    shadowColor: "rgba(34, 197, 94, 0.12)",
+    shadowHoverColor: "rgba(34, 197, 94, 0.22)",
+    tag: "Art + Environment",
+    icon: <FaLeaf size={22} color="#22c55e" />,
+    title: "Earth Day Art Contest",
+    description:
+      "An art competition for ages 5–17 celebrating Earth Day 2026, with prizes across two age groups. Encouraging young artists to connect creativity with environmental awareness.",
+    cta: "Visit →",
+  },
+  {
+    href: "https://collegestatistics.org",
+    accent: "#3b82f6",
+    gradient: "linear-gradient(135deg, #0c1a3a 0%, #1e3a5f 100%)",
+    shadowColor: "rgba(59, 130, 246, 0.12)",
+    shadowHoverColor: "rgba(59, 130, 246, 0.22)",
+    tag: "Data Analytics",
+    icon: <FaChartBar size={22} color="#3b82f6" />,
+    title: "College Statistics",
+    description:
+      "A data visualization dashboard comparing universities using Common Data Set metrics — acceptance rates, costs, SAT scores, financial aid, and demographics over time.",
+    cta: "Visit →",
+  },
+  {
+    href: "https://dunebroom.com",
+    accent: "#f59e0b",
+    gradient: "linear-gradient(135deg, #1c1203 0%, #2d1f05 100%)",
+    shadowColor: "rgba(245, 158, 11, 0.12)",
+    shadowHoverColor: "rgba(245, 158, 11, 0.22)",
+    tag: "Robotics + AI",
+    icon: <FaBroom size={22} color="#f59e0b" />,
+    title: "DuneBroom",
+    description:
+      "An autonomous beach-cleaning robot powered by edge AI. Uses ML-based computer vision to distinguish litter from natural material and remove it without disturbing the environment.",
+    cta: "Visit →",
+  },
+  {
+    href: "https://buddybridge.us",
+    accent: "#8b5cf6",
+    gradient: "linear-gradient(135deg, #1a0f2e 0%, #2d1b4e 100%)",
+    shadowColor: "rgba(139, 92, 246, 0.12)",
+    shadowHoverColor: "rgba(139, 92, 246, 0.22)",
+    tag: "Community",
+    icon: <FaHandshake size={22} color="#8b5cf6" />,
+    title: "BuddyBridge",
+    description:
+      "A platform connecting elderly adults with teen and college volunteers for free, everyday task assistance — bridging generations through community service.",
+    cta: "Visit →",
+  },
+];
 
 export default function ProjectsSection() {
   return (
@@ -29,241 +84,150 @@ export default function ProjectsSection() {
           maxWidth: 1200,
           margin: "0 auto",
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
           gap: "2rem",
           padding: "0 1rem",
         }}
       >
-        {/* College Statistics */}
-        <a
-          href="https://collegestatistics.org"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            textDecoration: "none",
-            color: "inherit",
-            display: "block",
-          }}
-        >
-          <div
+        {projects.map((project) => (
+          <a
+            key={project.title}
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
-              background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
-              borderRadius: "20px",
-              padding: "2.5rem",
-              color: "#fff",
-              textAlign: "left",
-              transition: "all 0.3s ease",
-              boxShadow: "0 10px 30px rgba(15, 23, 42, 0.2)",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              position: "relative",
-              overflow: "hidden",
-              cursor: "pointer",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-8px)";
-              e.currentTarget.style.boxShadow =
-                "0 20px 40px rgba(15, 23, 42, 0.3)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow =
-                "0 10px 30px rgba(15, 23, 42, 0.2)";
+              textDecoration: "none",
+              color: "inherit",
+              display: "block",
             }}
           >
-            {/* Background Pattern */}
             <div
               style={{
-                position: "absolute",
-                top: "-50%",
-                right: "-50%",
-                width: "200%",
-                height: "200%",
-                background:
-                  "radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)",
-                backgroundSize: "20px 20px",
-                opacity: 0.3,
-                zIndex: 0,
+                background: project.gradient,
+                borderRadius: "20px",
+                padding: "2.5rem",
+                color: "#fff",
+                textAlign: "left",
+                transition: "all 0.3s ease",
+                boxShadow: `0 10px 30px ${project.shadowColor}`,
+                border: "1px solid rgba(255, 255, 255, 0.07)",
+                borderTop: `4px solid ${project.accent}`,
+                position: "relative",
+                overflow: "hidden",
+                cursor: "pointer",
+                height: "100%",
+                boxSizing: "border-box",
               }}
-            />
-
-            {/* Content */}
-            <div style={{ position: "relative", zIndex: 1 }}>
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-8px)";
+                e.currentTarget.style.boxShadow = `0 20px 40px ${project.shadowHoverColor}`;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = `0 10px 30px ${project.shadowColor}`;
+              }}
+            >
+              {/* Subtle glow in corner */}
               <div
                 style={{
+                  position: "absolute",
+                  top: "-60px",
+                  right: "-60px",
+                  width: "200px",
+                  height: "200px",
+                  background: `radial-gradient(circle, ${project.accent}22 0%, transparent 70%)`,
+                  zIndex: 0,
+                }}
+              />
+
+              <div
+                style={{
+                  position: "relative",
+                  zIndex: 1,
                   display: "flex",
-                  alignItems: "center",
+                  flexDirection: "column",
                   gap: "1rem",
-                  marginBottom: "1.5rem",
                 }}
               >
+                {/* Tag + icon row */}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <span
+                    style={{
+                      background: `${project.accent}22`,
+                      border: `1px solid ${project.accent}55`,
+                      color: project.accent,
+                      borderRadius: "999px",
+                      padding: "0.25rem 0.75rem",
+                      fontSize: 12,
+                      fontWeight: 600,
+                      letterSpacing: "0.04em",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    {project.tag}
+                  </span>
+                  <div
+                    style={{
+                      background: `${project.accent}22`,
+                      borderRadius: "10px",
+                      padding: "0.5rem",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {project.icon}
+                  </div>
+                </div>
+
+                {/* Title */}
                 <h3
                   style={{
-                    fontSize: 28,
+                    fontSize: 24,
                     fontWeight: 700,
                     margin: 0,
                     letterSpacing: "-0.01em",
                   }}
                 >
-                  College Statistics
+                  {project.title}
                 </h3>
-              </div>
 
-              <p
-                style={{
-                  fontSize: 16,
-                  lineHeight: 1.6,
-                  margin: 0,
-                  opacity: 0.9,
-                  maxWidth: "100%",
-                }}
-              >
-                A data visualization dashboard for comparing colleges using
-                Common Data Set (CDS) metrics. View historical trends for
-                admissions, test scores, costs, financial aid, and demographics.
-              </p>
-
-              <div
-                style={{
-                  marginTop: "1.5rem",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.5rem",
-                  opacity: 0.8,
-                  fontSize: 14,
-                  fontWeight: 500,
-                }}
-              >
-                <span>Learn More About College Statistics</span>
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </a>
-
-        {/* DuneBroom Project 
-        <a
-          href="https://dunebroom.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            textDecoration: "none",
-            color: "inherit",
-            display: "block",
-          }}
-        >
-          <div
-            style={{
-              background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
-              borderRadius: "20px",
-              padding: "2.5rem",
-              color: "#fff",
-              textAlign: "left",
-              transition: "all 0.3s ease",
-              boxShadow: "0 10px 30px rgba(15, 23, 42, 0.2)",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
-              position: "relative",
-              overflow: "hidden",
-              cursor: "pointer",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-8px)";
-              e.currentTarget.style.boxShadow = "0 20px 40px rgba(15, 23, 42, 0.3)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow = "0 10px 30px rgba(15, 23, 42, 0.2)";
-            }}
-          >
-            <div
-              style={{
-                position: "absolute",
-                top: "-50%",
-                right: "-50%",
-                width: "200%",
-                height: "200%",
-                background: "radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)",
-                backgroundSize: "20px 20px",
-                opacity: 0.3,
-                zIndex: 0,
-              }}
-            />
-
-            <div style={{ position: "relative", zIndex: 1 }}>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "1rem",
-                  marginBottom: "1.5rem",
-                }}
-              >
-                <FaBroom size={32} />
-                <h3
+                {/* Description */}
+                <p
                   style={{
-                    fontSize: 28,
-                    fontWeight: 700,
+                    fontSize: 15,
+                    lineHeight: 1.65,
                     margin: 0,
-                    letterSpacing: "-0.01em",
+                    color: "rgba(255,255,255,0.75)",
                   }}
                 >
-                  DuneBroom
-                </h3>
-              </div>
+                  {project.description}
+                </p>
 
-              <p
-                style={{
-                  fontSize: 16,
-                  lineHeight: 1.6,
-                  margin: 0,
-                  opacity: 0.9,
-                  maxWidth: "100%",
-                }}
-              >
-                DuneBroom is a student-led robotics project dedicated to making a real-world impact for our beaches and our planet. Founded by Neev Grover, DuneBroom builds autonomous robots powered by edge AI to clean beaches.
-              </p>
-
-              <div
-                style={{
-                  marginTop: "1.5rem",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.5rem",
-                  opacity: 0.8,
-                  fontSize: 14,
-                  fontWeight: 500,
-                }}
-              >
-                <span>Learn More About DuneBroom</span>
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                {/* CTA */}
+                <div
+                  style={{
+                    marginTop: "0.5rem",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.4rem",
+                    color: project.accent,
+                    fontSize: 14,
+                    fontWeight: 600,
+                  }}
                 >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
+                  {project.cta}
+                </div>
               </div>
             </div>
-          </div>
-        </a>
-*/}
+          </a>
+        ))}
       </div>
     </section>
   );

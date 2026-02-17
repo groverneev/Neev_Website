@@ -40,7 +40,7 @@ components/
   Navbar.tsx          — Sticky navbar with mobile hamburger drawer
   Footer.tsx          — Footer with social links and privacy policy link
   BlogSection.tsx     — Homepage blog preview card (links to Substack)
-  ProjectsSection.tsx — Homepage projects grid (College Statistics, DuneBroom commented out)
+  ProjectsSection.tsx — Homepage projects grid (Earth Day Art Contest, College Statistics, DuneBroom, BuddyBridge)
   ContactSection.tsx  — Contact form using Formspree
   PrivacyPolicy.tsx   — Privacy policy content
 
@@ -63,12 +63,15 @@ public/
 - X/Twitter: https://x.com/groverneev01
 - LinkedIn: https://www.linkedin.com/in/neevgrover/
 - College Statistics project: https://collegestatistics.org
+- DuneBroom project: https://dunebroom.com
+- BuddyBridge project: https://buddybridge.us
+- Earth Day Art Contest: https://earthdayartcontest.vercel.app
 
 ## Important Notes
 
-- The DuneBroom project card in `ProjectsSection.tsx` is currently **commented out**.
+- `ProjectsSection.tsx` shows 4 projects: Earth Day Art Contest, College Statistics, DuneBroom, BuddyBridge — each with a unique accent color and gradient.
+- `BlogSection.tsx` uses an editorial hero card with Substack orange (`#ff6719`) accent and a distinct background (`#0a0e1a`) to differentiate from the Projects section.
 - The blog page background color has a TODO comment: `//this needs to be changed`.
-- `BlogSection.tsx` uses `id="projects"` which is a bug — should probably be `id="blog"`.
 - Social links appear in both `page.tsx` (hero section) and `Footer.tsx` — keep them in sync when updating.
 
 ## When Making Major Changes
