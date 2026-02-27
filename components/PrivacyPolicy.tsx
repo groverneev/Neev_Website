@@ -72,118 +72,118 @@ export default function PrivacyPolicy() {
             border: "1px solid #252d3d",
           }}
         >
-          {/* Introduction */}
-          <h2 style={{ ...sectionHeadingStyle, marginTop: 0 }}>Introduction</h2>
+          {/* App name badge */}
+          <div style={{ marginBottom: 32 }}>
+            <span
+              style={{
+                display: "inline-block",
+                background: "#1e2a3a",
+                border: "1px solid #2e3f55",
+                borderRadius: 6,
+                padding: "4px 14px",
+                fontSize: 13,
+                fontWeight: 600,
+                color: "#6b9fd4",
+                letterSpacing: "0.04em",
+                textTransform: "uppercase",
+              }}
+            >
+              Dice Flipper
+            </span>
+          </div>
+
+          {/* Summary */}
+          <h2 style={{ ...sectionHeadingStyle, marginTop: 0 }}>Overview</h2>
           <p style={paragraphStyle}>
-            This Privacy Policy explains how Neev Grover (&quot;we,&quot;
-            &quot;us,&quot; or &quot;our&quot;) handles information in connection
-            with the personal website located at neevgrover.com (the
-            &quot;Website&quot;) and the Weather 365 iOS application (the
-            &quot;App&quot;). Your privacy matters to us, and we are committed to
-            being transparent about our practices.
+            Dice Flipper does not collect, store, transmit, or share any
+            personal data. The app operates entirely on your device with no
+            internet connection required.
           </p>
 
-          {/* Information We Collect */}
-          <h2 style={sectionHeadingStyle}>Information We Collect</h2>
-          <h3 style={subHeadingStyle}>Website</h3>
+          {/* What we don't collect */}
+          <h2 style={sectionHeadingStyle}>What We Don&apos;t Collect</h2>
           <p style={paragraphStyle}>
-            The Website does not require you to create an account or provide any
-            personal information to browse its content. If you choose to use the
-            contact form, we collect the information you voluntarily submit, such
-            as your name, email address, and message. This data is processed
-            through Formspree, a third-party form handling service.
-          </p>
-          <h3 style={subHeadingStyle}>Weather 365 App</h3>
-          <p style={paragraphStyle}>
-            Weather 365 does not collect, store, or transmit any personal data.
-            The App fetches weather data based on your device&apos;s location to
-            display forecasts. Location data is used solely on-device to request
-            weather information and is never sent to our servers or stored by us.
-          </p>
-
-          {/* How We Use Your Information */}
-          <h2 style={sectionHeadingStyle}>How We Use Your Information</h2>
-          <p style={paragraphStyle}>
-            Any information you provide through the Website&apos;s contact form
-            is used exclusively to respond to your inquiry. We do not use your
-            information for marketing, sell it, or share it with third parties
-            for their own purposes.
-          </p>
-
-          {/* Third-Party Services */}
-          <h2 style={sectionHeadingStyle}>Third-Party Services</h2>
-          <p style={paragraphStyle}>
-            We use the following third-party services that may process limited
-            data in the course of operating the Website and App:
+            Dice Flipper has absolutely none of the following:
           </p>
           <ul
             style={{
               ...paragraphStyle,
-              paddingLeft: 24,
-              marginBottom: 20,
+              paddingLeft: 0,
+              listStyle: "none",
+              display: "grid",
+              gap: 10,
+              marginBottom: 24,
             }}
           >
-            <li style={{ marginBottom: 8 }}>
-              <strong style={{ color: "#cdd1da" }}>Formspree</strong> — Handles
-              contact form submissions on the Website. Formspree may store your
-              submitted data in accordance with their own privacy policy.
-            </li>
-            <li style={{ marginBottom: 8 }}>
-              <strong style={{ color: "#cdd1da" }}>Vercel</strong> — Hosts the
-              Website. Vercel may collect standard server logs (such as IP
-              addresses and access times) as part of normal web hosting
-              operations.
-            </li>
-            <li style={{ marginBottom: 8 }}>
-              <strong style={{ color: "#cdd1da" }}>Weather Data Provider</strong>{" "}
-              — Weather 365 fetches forecast data from a third-party weather
-              API. Only your approximate location is sent to retrieve local
-              weather information; no personally identifiable information is
-              transmitted.
-            </li>
+            {[
+              "Analytics or usage tracking",
+              "Crash reporting",
+              "Advertising SDKs",
+              "User accounts or login",
+              "Internet connection",
+              "Data collection of any kind",
+            ].map((item) => (
+              <li
+                key={item}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 10,
+                  color: "#a0a6b2",
+                  fontSize: 16,
+                }}
+              >
+                <span
+                  style={{
+                    width: 20,
+                    height: 20,
+                    borderRadius: "50%",
+                    background: "#1a2a1a",
+                    border: "1px solid #2a4a2a",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                    fontSize: 11,
+                    color: "#4caf72",
+                    fontWeight: 700,
+                  }}
+                >
+                  ✕
+                </span>
+                {item}
+              </li>
+            ))}
           </ul>
 
-          {/* Cookies & Tracking */}
-          <h2 style={sectionHeadingStyle}>Cookies &amp; Tracking</h2>
-          <p style={paragraphStyle}>
-            The Website does not use cookies, tracking pixels, analytics
-            services, or any other tracking technologies. The Weather 365 App
-            also does not include any analytics or tracking SDKs.
-          </p>
+          {/* Commitment */}
+          <h2 style={sectionHeadingStyle}>Our Commitment</h2>
+          <div
+            style={{
+              background: "#0e1a0e",
+              border: "1px solid #1e3a1e",
+              borderRadius: 8,
+              padding: "20px 24px",
+              marginBottom: 24,
+            }}
+          >
+            <p
+              style={{
+                ...paragraphStyle,
+                marginBottom: 0,
+                color: "#7fc896",
+              }}
+            >
+              Nothing you do in the app is sent anywhere. No data is collected.
+              No data is shared. No data is sold. <strong>Ever.</strong>
+            </p>
+          </div>
 
-          {/* Data Retention */}
-          <h2 style={sectionHeadingStyle}>Data Retention</h2>
+          {/* Contact */}
+          <h2 style={sectionHeadingStyle}>Contact</h2>
           <p style={paragraphStyle}>
-            We do not maintain our own database or servers for storing user data.
-            Contact form submissions are retained by Formspree according to
-            their data retention policies. We may retain copies of
-            correspondence for as long as necessary to address your inquiry.
-          </p>
-
-          {/* Children's Privacy */}
-          <h2 style={sectionHeadingStyle}>Children&apos;s Privacy</h2>
-          <p style={paragraphStyle}>
-            The Website and App are not directed at children under the age of
-            13. We do not knowingly collect personal information from children.
-            If you believe a child has provided us with personal information,
-            please contact us and we will take steps to delete it.
-          </p>
-
-          {/* Changes to This Policy */}
-          <h2 style={sectionHeadingStyle}>Changes to This Policy</h2>
-          <p style={paragraphStyle}>
-            We may update this Privacy Policy from time to time to reflect
-            changes in our practices or for other operational, legal, or
-            regulatory reasons. Any changes will be posted on this page with an
-            updated revision date. We encourage you to review this policy
-            periodically.
-          </p>
-
-          {/* Contact Us */}
-          <h2 style={sectionHeadingStyle}>Contact Us</h2>
-          <p style={{ ...paragraphStyle, marginBottom: 0 }}>
-            If you have any questions or concerns about this Privacy Policy,
-            please reach out to us.
+            If you have any questions about this privacy policy, feel free to
+            reach out: groverneev at gmail dot com
           </p>
         </div>
       </section>
