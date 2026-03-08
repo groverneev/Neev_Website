@@ -5,7 +5,6 @@ export default function Footer() {
     { href: "https://techunpacked.substack.com", label: "Blog", external: true },
     { href: "/#projects", label: "Projects", external: false },
     { href: "/#contact", label: "Contact", external: false },
-    { href: "/privacy-policy", label: "Privacy Policy", external: false },
   ];
 
   const socialLinks = [
