@@ -16,14 +16,6 @@ export default function PrivacyPolicy() {
     marginBottom: 16,
   };
 
-  const subHeadingStyle: React.CSSProperties = {
-    fontSize: 15,
-    fontWeight: 600,
-    color: "#e6edf3",
-    marginBottom: 8,
-    marginTop: 20,
-  };
-
   return (
     <main style={{ background: "#080b12" }}>
       {/* Hero Banner */}
@@ -44,15 +36,6 @@ export default function PrivacyPolicy() {
         >
           Privacy Policy
         </h1>
-        <p
-          style={{
-            color: "#7d8590",
-            fontSize: 14,
-            marginTop: 10,
-          }}
-        >
-          Last updated: February 15, 2026
-        </p>
       </section>
 
       {/* Content */}
@@ -71,19 +54,14 @@ export default function PrivacyPolicy() {
             border: "1px solid #1c2333",
           }}
         >
-          {/* App name badge */}
+          {/* App name */}
           <div style={{ marginBottom: 32 }}>
             <span
               style={{
-                display: "inline-block",
-                background: "#0d1117",
-                border: "1px solid #1c2333",
-                borderRadius: 6,
-                padding: "4px 14px",
                 fontSize: 13,
                 fontWeight: 600,
-                color: "#818cf8",
-                letterSpacing: "0.04em",
+                color: "#7d8590",
+                letterSpacing: "0.08em",
                 textTransform: "uppercase",
               }}
             >
@@ -106,11 +84,10 @@ export default function PrivacyPolicy() {
           </p>
           <ul
             style={{
-              ...paragraphStyle,
               paddingLeft: 0,
               listStyle: "none",
               display: "grid",
-              gap: 10,
+              gap: 8,
               marginBottom: 24,
             }}
           >
@@ -130,26 +107,18 @@ export default function PrivacyPolicy() {
                   gap: 10,
                   color: "#7d8590",
                   fontSize: 14,
+                  lineHeight: 1.7,
                 }}
               >
                 <span
                   style={{
-                    width: 20,
-                    height: 20,
+                    width: 4,
+                    height: 4,
                     borderRadius: "50%",
-                    background: "#1a2a1a",
-                    border: "1px solid #2a4a2a",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
+                    background: "#30363d",
                     flexShrink: 0,
-                    fontSize: 11,
-                    color: "#4caf72",
-                    fontWeight: 700,
                   }}
-                >
-                  ✕
-                </span>
+                />
                 {item}
               </li>
             ))}
@@ -157,32 +126,16 @@ export default function PrivacyPolicy() {
 
           {/* Commitment */}
           <h2 style={sectionHeadingStyle}>Our Commitment</h2>
-          <div
-            style={{
-              background: "#0e1a0e",
-              border: "1px solid #1e3a1e",
-              borderRadius: 8,
-              padding: "20px 24px",
-              marginBottom: 24,
-            }}
-          >
-            <p
-              style={{
-                ...paragraphStyle,
-                marginBottom: 0,
-                color: "#7fc896",
-              }}
-            >
-              Nothing you do in the app is sent anywhere. No data is collected.
-              No data is shared. No data is sold. <strong>Ever.</strong>
-            </p>
-          </div>
+          <p style={paragraphStyle}>
+            Nothing you do in the app is sent anywhere. No data is collected,
+            shared, or sold. <strong style={{ color: "#e6edf3" }}>Ever.</strong>
+          </p>
 
           {/* Contact */}
           <h2 style={sectionHeadingStyle}>Contact</h2>
-          <p style={paragraphStyle}>
+          <p style={{ ...paragraphStyle, marginBottom: 0 }}>
             If you have any questions about this privacy policy, feel free to
-            reach out: groverneev at gmail dot com
+            reach out at: groverneev at gmail dot com
           </p>
         </div>
       </section>
