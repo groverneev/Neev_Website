@@ -1,125 +1,138 @@
+"use client";
+
 import Image from "next/image";
 import ContactSection from "@/components/ContactSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import BlogSection from "@/components/BlogSection";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiSubstack } from "react-icons/si";
-import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+
+const iconStyle: React.CSSProperties = {
+  color: "#30363d",
+  transition: "color 0.15s",
+  display: "flex",
+};
 
 export default function Home() {
   return (
-    <main style={{ background: "#f5f6fa", fontFamily: "Inter, sans-serif" }}>
-      {/* ───────── HERO SECTION ───────── */}
+    <main style={{ background: "#080b12" }}>
+      {/* ───────── HERO ───────── */}
       <section
         id="hero"
         style={{
-          minHeight: "85vh",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
           alignItems: "center",
-          background: "#0f1117",
-          color: "#fff",
           textAlign: "center",
-          padding: "0 2rem",
+          padding: "96px 1.5rem 80px",
         }}
       >
-        {/* --- Profile Image --- */}
-        <div style={{ flex: "none" }}>
-          <Image
-            src="/profile.png"
-            alt="Neev Grover"
-            width={140}
-            height={140}
-            style={{
-              borderRadius: "50%",
-              border: "4px solid #111",
-              boxShadow: "0 4px 18px rgba(0,0,0,0.09)",
-              background: "#eee",
-              display: "block",
-              margin: 0,
-            }}
-          />
-        </div>
+        <Image
+          src="/profile.png"
+          alt="Neev Grover"
+          width={80}
+          height={80}
+          style={{
+            borderRadius: "50%",
+            boxShadow: "0 2px 12px rgba(0,0,0,0.4)",
+            display: "block",
+          }}
+        />
 
         <h1
           style={{
-            fontSize: 64,
+            fontSize: 44,
             fontWeight: 800,
             letterSpacing: "-0.03em",
-            margin: 0,
+            color: "#e6edf3",
+            margin: "14px 0 6px",
           }}
         >
           Neev Grover
         </h1>
-        <h2 style={{ fontSize: 28, fontWeight: 400, margin: "1.2rem 0" }}>
-          Sophomore at the Harker School
-        </h2>
-        <p style={{ fontSize: 22, maxWidth: 600, margin: "0 auto 2rem auto" }}>
-          Neev is passionate about Computer Science, Chess, and the Environment.
-          He enjoys building projects, playing competitive chess, and writing
-          about technology on his blog.
-        </p>
 
-        <div
+        <p
           style={{
-            display: "flex",
-            gap: 24,
-            justifyContent: "center",
-            marginBottom: 32,
+            fontSize: 16,
+            color: "#7d8590",
+            margin: "0 0 10px",
+            fontWeight: 400,
           }}
         >
-          {/* X */}
+          Sophomore at Harker School · building things I care about
+        </p>
+
+        <p
+          style={{
+            fontSize: 15,
+            color: "#7d8590",
+            maxWidth: 460,
+            margin: "0 auto 28px",
+            lineHeight: 1.65,
+          }}
+        >
+          I&apos;m passionate about computer science, chess, and the environment.
+          I build projects that sit at the intersection of all three.
+        </p>
+
+        <div style={{ display: "flex", gap: 14, alignItems: "center" }}>
           <a
             href="https://x.com/groverneev01"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "#fff" }}
+            style={iconStyle}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#e6edf3")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#30363d")}
           >
-            <FaXTwitter size={28} />
+            <FaXTwitter size={18} />
           </a>
-
-          {/* GitHub */}
           <a
             href="https://github.com/groverneev"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "#fff" }}
+            style={iconStyle}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#e6edf3")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#30363d")}
           >
-            <FaGithub size={28} />
+            <FaGithub size={18} />
           </a>
-
-          {/* Substack */}
           <a
             href="https://techunpacked.substack.com"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "#fff" }}
+            style={iconStyle}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#e6edf3")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#30363d")}
           >
-            <SiSubstack size={28} />
+            <SiSubstack size={18} />
           </a>
-
-          {/* LinkedIn */}
           <a
             href="https://www.linkedin.com/in/neevgrover/"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "#fff" }}
+            style={iconStyle}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#e6edf3")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#30363d")}
           >
-            <FaLinkedin size={28} />
+            <FaLinkedin size={18} />
           </a>
         </div>
       </section>
 
-      {/* ───────── BLOG SECTION ───────── */}
-      <BlogSection />
-
-      {/* ───────── PROJECTS SECTION ───────── */}
-      <ProjectsSection />
-
-      {/* ───────── CONTACT SECTION ───────── */}
-      <ContactSection />
+      {/* ───────── SECTIONS ───────── */}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "5rem",
+          paddingBottom: "7rem",
+        }}
+      >
+        <BlogSection />
+        <ProjectsSection />
+        <ContactSection />
+      </div>
     </main>
   );
 }

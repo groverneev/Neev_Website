@@ -14,7 +14,6 @@ Personal website for Neev Grover — live at [neevgrover.com](https://neevgrover
 - **Language:** TypeScript
 - **Styling:** Inline styles + Tailwind CSS v4 (via PostCSS plugin), Inter font from Google Fonts
 - **Icons:** react-icons (FontAwesome, Simple Icons)
-- **Blog:** RSS feed from Substack (`rss-parser`), server-side fetched with ISR (1h revalidation)
 - **Contact form:** Formspree (`https://formspree.io/f/xnnvbrzq`)
 - **Deployment:** Vercel
 
@@ -30,17 +29,16 @@ Personal website for Neev Grover — live at [neevgrover.com](https://neevgrover
 ```
 app/
   layout.tsx          — Root layout (Navbar + Footer wrapper)
-  page.tsx            — Homepage (Hero, Blog, Projects, Contact sections)
+  page.tsx            — Homepage (Hero, Writing, Projects, Contact sections)
   globals.css         — Global styles, CSS variables, Inter font import
   not-found.tsx       — Custom 404 page
-  blog/page.tsx       — Blog page (server component, fetches Substack RSS)
   privacy-policy/page.tsx — Privacy policy page
 
 components/
-  Navbar.tsx          — Sticky navbar with mobile hamburger drawer
-  Footer.tsx          — Footer with social links and privacy policy link
-  BlogSection.tsx     — Homepage blog preview card (links to Substack)
-  ProjectsSection.tsx — Homepage projects grid (Earth Day Art Contest, College Statistics, DuneBroom, BuddyBridge)
+  Navbar.tsx          — Sticky glassy dark navbar with mobile hamburger
+  Footer.tsx          — Single-row footer (copyright, privacy link, social icons)
+  BlogSection.tsx     — Slim "Writing" card linking to Substack newsletter
+  ProjectsSection.tsx — 2-column projects grid (Earth Day Art Contest, College Statistics, DuneBroom, BuddyBridge)
   ContactSection.tsx  — Contact form using Formspree
   PrivacyPolicy.tsx   — Privacy policy content
 
@@ -51,10 +49,13 @@ public/
 
 ## Architecture & Patterns
 
-- **Styling approach:** Primarily inline React styles (not CSS modules or Tailwind utility classes). The dark theme uses `#0E1321` as the primary background color.
-- **Client vs Server components:** Components using interactivity (`useState`, event handlers) are marked `"use client"`. The blog page (`app/blog/page.tsx`) is an async server component.
+- **Styling approach:** Primarily inline React styles (not CSS modules or Tailwind utility classes). The dark theme uses `#080b12` as the primary background color.
+- **Design system:** Color palette — `#080b12` bg, `#0d1117` surface, `#1c2333` borders, `#e6edf3` text, `#7d8590` muted text, `#30363d` dim text, `#818cf8` accent (indigo).
+- **Max-width:** 680px centered for all content (single-column feel).
+- **Client vs Server components:** Components using interactivity (`useState`, event handlers) are marked `"use client"`. All section components are client components.
 - **No API routes** — contact form submits directly to Formspree.
-- **No database** — static site with ISR for blog content.
+- **No database** — static site.
+- **No /blog page** — the navbar "Blog" link goes directly to Substack externally.
 
 ## Key URLs & Social Links
 
@@ -69,10 +70,11 @@ public/
 
 ## Important Notes
 
-- `ProjectsSection.tsx` shows 4 projects: Earth Day Art Contest, College Statistics, DuneBroom, BuddyBridge — each with a unique accent color and gradient.
-- `BlogSection.tsx` uses an editorial hero card with Substack orange (`#ff6719`) accent and a distinct background (`#0a0e1a`) to differentiate from the Projects section.
-- The blog page background color has a TODO comment: `//this needs to be changed`.
+- `ProjectsSection.tsx` shows 4 projects in a 2-column grid: Earth Day Art Contest, College Statistics, DuneBroom, BuddyBridge.
+- `BlogSection.tsx` is a slim single-row card (not a full section) in the "Writing" area.
 - Social links appear in both `page.tsx` (hero section) and `Footer.tsx` — keep them in sync when updating.
+- `rss-parser` remains as an installed dependency but is no longer used (blog page was removed). Safe to uninstall if desired.
+- Do NOT add a privacy policy link to the footer. The privacy policy is accessible at `/privacy-policy` but should not appear as a footer link.
 
 ## When Making Major Changes
 

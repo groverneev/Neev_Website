@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "Neev Grover",
-  description: "Personal site for Neev Grover",
+  description: "Sophomore at the Harker School, building at the intersection of code, chess, and environment.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -28,7 +28,7 @@ export default function RootLayout({
         }}
       >
         <Navbar />
-        <main style={{ minHeight: "80vh" }}>{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

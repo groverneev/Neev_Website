@@ -6,181 +6,180 @@ const projects = [
   {
     href: "https://earthdayartcontest.vercel.app",
     tag: "Art + Environment",
-    icon: <FaLeaf size={18} color="#8b949e" />,
+    icon: <FaLeaf size={15} color="#30363d" />,
     title: "Earth Day Art Contest",
     description:
-      "An art competition for ages 5–17 celebrating Earth Day 2026, with prizes across two age groups. Encouraging young artists to connect creativity with environmental awareness.",
+      "An art competition for ages 5–17 celebrating Earth Day 2026, with prizes across two age groups.",
   },
   {
     href: "https://collegestatistics.org",
     tag: "Data Analytics",
-    icon: <FaChartBar size={18} color="#8b949e" />,
+    icon: <FaChartBar size={15} color="#30363d" />,
     title: "College Statistics",
     description:
-      "A data visualization dashboard comparing universities using Common Data Set metrics — acceptance rates, costs, SAT scores, financial aid, and demographics over time.",
+      "A data visualization dashboard comparing universities using Common Data Set metrics over time.",
   },
   {
     href: "https://dunebroom.com",
     tag: "Robotics + AI",
-    icon: <FaBroom size={18} color="#8b949e" />,
+    icon: <FaBroom size={15} color="#30363d" />,
     title: "DuneBroom",
     description:
-      "An autonomous beach-cleaning robot powered by edge AI. Uses ML-based computer vision to distinguish litter from natural material and remove it without disturbing the environment.",
+      "An autonomous beach-cleaning robot using edge AI and computer vision to remove litter.",
   },
   {
     href: "https://buddybridge.us",
     tag: "Community",
-    icon: <FaHandshake size={18} color="#8b949e" />,
+    icon: <FaHandshake size={15} color="#30363d" />,
     title: "BuddyBridge",
     description:
-      "A platform connecting elderly adults with teen and college volunteers for free, everyday task assistance — bridging generations through community service.",
+      "A platform connecting elderly adults with teen volunteers for free, everyday task assistance.",
   },
 ];
 
 export default function ProjectsSection() {
   return (
-    <section
-      id="projects"
-      style={{
-        padding: "6rem 2rem",
-        background: "#0f1117",
-        textAlign: "center",
-      }}
-    >
-      <h2
-        style={{
-          fontSize: 48,
-          fontWeight: 700,
-          color: "#f9fafb",
-          marginBottom: "3rem",
-          letterSpacing: "-0.02em",
-        }}
-      >
-        Projects
-      </h2>
+    <section id="projects" style={{ padding: "0 1.5rem", scrollMarginTop: "72px" }}>
+      <div style={{ maxWidth: 680, margin: "0 auto" }}>
+        {/* Section label */}
+        <p
+          style={{
+            fontSize: 11,
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
+            color: "#30363d",
+            margin: "0 0 1rem",
+          }}
+        >
+          Projects
+        </p>
 
-      <div
-        style={{
-          maxWidth: 1200,
-          margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-          gap: "1.25rem",
-          padding: "0 1rem",
-        }}
-      >
-        {projects.map((project) => (
-          <a
-            key={project.title}
-            href={project.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              textDecoration: "none",
-              color: "inherit",
-              display: "block",
-            }}
-          >
-            <div
-              style={{
-                background: "#161b27",
-                borderRadius: "12px",
-                padding: "2rem",
-                color: "#f9fafb",
-                textAlign: "left",
-                border: "1px solid #252d3d",
-                cursor: "pointer",
-                transition: "border-color 0.2s ease",
-                height: "100%",
-                boxSizing: "border-box",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "#374151";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "#252d3d";
-              }}
+        {/* Grid */}
+        <div
+          className="projects-grid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(2, 1fr)",
+            gap: "0.75rem",
+          }}
+        >
+          {projects.map((project) => (
+            <a
+              key={project.title}
+              href={project.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", color: "inherit", display: "block" }}
             >
-              {/* Tag + icon */}
               <div
                 style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  marginBottom: "1rem",
+                  background: "#0d1117",
+                  borderRadius: 8,
+                  padding: "1.5rem",
+                  border: "1px solid #1c2333",
+                  cursor: "pointer",
+                  transition: "border-color 0.15s",
+                  height: "100%",
+                  boxSizing: "border-box",
                 }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.borderColor = "#30363d")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.borderColor = "#1c2333")
+                }
               >
-                <span
+                {/* Tag + icon */}
+                <div
                   style={{
-                    background: "#1e2433",
-                    color: "#8b949e",
-                    borderRadius: "6px",
-                    padding: "0.2rem 0.65rem",
-                    fontSize: 12,
-                    fontWeight: 500,
-                    letterSpacing: "0.03em",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    marginBottom: "0.75rem",
                   }}
                 >
-                  {project.tag}
-                </span>
-                {project.icon}
-              </div>
+                  <span
+                    style={{
+                      fontSize: 11,
+                      fontWeight: 500,
+                      color: "#30363d",
+                      border: "1px solid #1c2333",
+                      borderRadius: 4,
+                      padding: "0.15rem 0.5rem",
+                      letterSpacing: "0.03em",
+                    }}
+                  >
+                    {project.tag}
+                  </span>
+                  {project.icon}
+                </div>
 
-              {/* Title */}
-              <h3
-                style={{
-                  fontSize: 20,
-                  fontWeight: 700,
-                  margin: "0 0 0.75rem 0",
-                  letterSpacing: "-0.01em",
-                  color: "#f9fafb",
-                }}
-              >
-                {project.title}
-              </h3>
-
-              {/* Description */}
-              <p
-                style={{
-                  fontSize: 15,
-                  lineHeight: 1.65,
-                  margin: "0 0 1.25rem 0",
-                  color: "#8b949e",
-                }}
-              >
-                {project.description}
-              </p>
-
-              {/* CTA */}
-              <span
-                style={{
-                  fontSize: 14,
-                  fontWeight: 500,
-                  color: "#f9fafb",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "0.35rem",
-                }}
-              >
-                Visit
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                {/* Title */}
+                <h3
+                  style={{
+                    fontSize: 16,
+                    fontWeight: 600,
+                    margin: "0 0 0.5rem",
+                    letterSpacing: "-0.01em",
+                    color: "#e6edf3",
+                  }}
                 >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
-              </span>
-            </div>
-          </a>
-        ))}
+                  {project.title}
+                </h3>
+
+                {/* Description */}
+                <p
+                  style={{
+                    fontSize: 14,
+                    lineHeight: 1.6,
+                    margin: "0 0 1rem",
+                    color: "#7d8590",
+                  }}
+                >
+                  {project.description}
+                </p>
+
+                {/* CTA */}
+                <span
+                  style={{
+                    fontSize: 13,
+                    fontWeight: 500,
+                    color: "#7d8590",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.3rem",
+                    transition: "color 0.15s",
+                  }}
+                >
+                  Visit
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
+
+      <style>{`
+        @media (max-width: 540px) {
+          .projects-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

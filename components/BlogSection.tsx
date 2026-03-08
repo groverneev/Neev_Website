@@ -4,141 +4,108 @@ import { SiSubstack } from "react-icons/si";
 
 export default function BlogSection() {
   return (
-    <section
-      id="blog"
-      style={{
-        padding: "6rem 2rem",
-        background: "#0f1117",
-        textAlign: "center",
-      }}
-    >
-      <h2
-        style={{
-          fontSize: 48,
-          fontWeight: 700,
-          color: "#f9fafb",
-          marginBottom: "3rem",
-          letterSpacing: "-0.02em",
-        }}
-      >
-        Blog
-      </h2>
+    <section style={{ padding: "0 1.5rem" }}>
+      <div style={{ maxWidth: 680, margin: "0 auto" }}>
+        {/* Section label */}
+        <p
+          style={{
+            fontSize: 11,
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
+            color: "#30363d",
+            margin: "0 0 1rem",
+          }}
+        >
+          Writing
+        </p>
 
-      <div
-        style={{
-          maxWidth: 1200,
-          margin: "0 auto",
-          padding: "0 1rem",
-        }}
-      >
+        {/* Slim card */}
         <a
           href="https://techunpacked.substack.com"
           target="_blank"
           rel="noopener noreferrer"
-          style={{
-            textDecoration: "none",
-            color: "inherit",
-            display: "block",
-          }}
+          style={{ textDecoration: "none", color: "inherit", display: "block" }}
         >
           <div
             style={{
-              background: "#161b27",
-              borderRadius: "12px",
-              padding: "2.5rem",
-              color: "#f9fafb",
-              textAlign: "left",
-              border: "1px solid #252d3d",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: "1rem",
+              border: "1px solid #1c2333",
+              borderRadius: 8,
+              padding: "1.25rem 1.5rem",
+              background: "#0d1117",
               cursor: "pointer",
-              transition: "border-color 0.2s ease",
+              transition: "border-color 0.15s",
             }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#374151";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#252d3d";
-            }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.borderColor = "#30363d")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.borderColor = "#1c2333")
+            }
           >
-            <div
-              style={{
-                display: "flex",
-                alignItems: "flex-start",
-                justifyContent: "space-between",
-                flexWrap: "wrap",
-                gap: "1rem",
-                marginBottom: "1.25rem",
-              }}
-            >
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}
-              >
-                <SiSubstack size={22} color="#8b949e" />
-                <h3
+            {/* Left */}
+            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", minWidth: 0 }}>
+              <SiSubstack size={16} color="#30363d" style={{ flexShrink: 0 }} />
+              <div style={{ minWidth: 0 }}>
+                <span
                   style={{
-                    fontSize: 24,
-                    fontWeight: 700,
-                    margin: 0,
-                    letterSpacing: "-0.02em",
-                    color: "#f9fafb",
+                    fontSize: 16,
+                    fontWeight: 600,
+                    color: "#e6edf3",
+                    display: "block",
                   }}
                 >
                   Tech Unpacked
-                </h3>
+                </span>
+                <span
+                  style={{
+                    fontSize: 14,
+                    color: "#7d8590",
+                    display: "block",
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                  }}
+                >
+                  Guides and deep dives on AI, robotics, and software.
+                </span>
               </div>
+            </div>
 
+            {/* Right: badge + arrow */}
+            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flexShrink: 0 }}>
               <span
                 style={{
-                  background: "#1e2433",
-                  color: "#8b949e",
-                  borderRadius: "6px",
-                  padding: "0.2rem 0.65rem",
-                  fontSize: 12,
+                  fontSize: 11,
                   fontWeight: 500,
-                  letterSpacing: "0.03em",
+                  color: "#30363d",
+                  border: "1px solid #1c2333",
+                  borderRadius: 4,
+                  padding: "0.15rem 0.5rem",
+                  letterSpacing: "0.04em",
+                  textTransform: "uppercase",
                 }}
               >
                 Newsletter
               </span>
-            </div>
-
-            <p
-              style={{
-                fontSize: 16,
-                lineHeight: 1.7,
-                margin: "0 0 1.25rem 0",
-                color: "#8b949e",
-                maxWidth: "640px",
-              }}
-            >
-              Guides, deep dives, and explainers on the latest in technology —
-              from AI and robotics to software and beyond.
-            </p>
-
-            <span
-              style={{
-                fontSize: 14,
-                fontWeight: 500,
-                color: "#f9fafb",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.35rem",
-              }}
-            >
-              Read on Substack
               <svg
                 width="14"
                 height="14"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="currentColor"
+                stroke="#30363d"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
+                <path d="M7 17L17 7" />
+                <path d="M7 7h10v10" />
               </svg>
-            </span>
+            </div>
           </div>
         </a>
       </div>

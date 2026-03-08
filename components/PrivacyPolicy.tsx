@@ -2,54 +2,53 @@
 
 export default function PrivacyPolicy() {
   const sectionHeadingStyle: React.CSSProperties = {
-    fontSize: 22,
+    fontSize: 18,
     fontWeight: 700,
-    color: "#fff",
+    color: "#e6edf3",
     marginTop: 40,
     marginBottom: 12,
   };
 
   const paragraphStyle: React.CSSProperties = {
-    fontSize: 16,
-    lineHeight: 1.75,
-    color: "#a0a6b2",
+    fontSize: 14,
+    lineHeight: 1.7,
+    color: "#7d8590",
     marginBottom: 16,
   };
 
   const subHeadingStyle: React.CSSProperties = {
-    fontSize: 17,
+    fontSize: 15,
     fontWeight: 600,
-    color: "#cdd1da",
+    color: "#e6edf3",
     marginBottom: 8,
     marginTop: 20,
   };
 
   return (
-    <main style={{ background: "#0f1117", fontFamily: "Inter, sans-serif" }}>
+    <main style={{ background: "#080b12" }}>
       {/* Hero Banner */}
       <section
         style={{
-          padding: "5rem 2rem 3rem",
-          background: "#0f1117",
+          padding: "64px 1.5rem 48px",
           textAlign: "center",
         }}
       >
         <h1
           style={{
-            fontSize: 48,
-            fontWeight: 700,
-            color: "#fff",
+            fontSize: 32,
+            fontWeight: 800,
+            color: "#e6edf3",
             margin: 0,
-            letterSpacing: "-0.02em",
+            letterSpacing: "-0.03em",
           }}
         >
           Privacy Policy
         </h1>
         <p
           style={{
-            color: "#828893",
+            color: "#7d8590",
             fontSize: 14,
-            marginTop: 12,
+            marginTop: 10,
           }}
         >
           Last updated: February 15, 2026
@@ -59,17 +58,17 @@ export default function PrivacyPolicy() {
       {/* Content */}
       <section
         style={{
-          maxWidth: 800,
+          maxWidth: 720,
           margin: "0 auto",
-          padding: "0 2rem 80px",
+          padding: "0 1.5rem 6rem",
         }}
       >
         <div
           style={{
-            background: "#161b27",
-            borderRadius: 12,
-            padding: "48px 40px",
-            border: "1px solid #252d3d",
+            background: "#0d1117",
+            borderRadius: 8,
+            padding: "2rem",
+            border: "1px solid #1c2333",
           }}
         >
           {/* App name badge */}
@@ -77,13 +76,13 @@ export default function PrivacyPolicy() {
             <span
               style={{
                 display: "inline-block",
-                background: "#1e2a3a",
-                border: "1px solid #2e3f55",
+                background: "#0d1117",
+                border: "1px solid #1c2333",
                 borderRadius: 6,
                 padding: "4px 14px",
                 fontSize: 13,
                 fontWeight: 600,
-                color: "#6b9fd4",
+                color: "#818cf8",
                 letterSpacing: "0.04em",
                 textTransform: "uppercase",
               }}
@@ -129,8 +128,8 @@ export default function PrivacyPolicy() {
                   display: "flex",
                   alignItems: "center",
                   gap: 10,
-                  color: "#a0a6b2",
-                  fontSize: 16,
+                  color: "#7d8590",
+                  fontSize: 14,
                 }}
               >
                 <span
