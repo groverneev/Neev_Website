@@ -134,6 +134,30 @@ export default function Home() {
       >
         <BlogSection />
         <ProjectsSection />
+
+        {/* ───────── GITHUB ACTIVITY ───────── */}
+        <section
+          id="github-activity"
+          style={{ padding: "0 1.5rem", maxWidth: 860, margin: "0 auto", width: "100%" }}
+        >
+          <h2
+            style={{
+              fontSize: 28,
+              fontWeight: 700,
+              letterSpacing: "-0.03em",
+              color: "#1a1a1a",
+              marginBottom: "1.5rem",
+            }}
+          >
+            GitHub Activity
+          </h2>
+          <img
+            src="https://ghchart.rshah.org/groverneev"
+            alt="Neev Grover's GitHub contribution chart"
+            style={{ width: "100%", borderRadius: 8 }}
+          />
+        </section>
+
         <ContactSection />
       </div>
     </main>
