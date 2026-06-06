@@ -1,19 +1,10 @@
 "use client";
 
-import { FaBroom, FaLeaf, FaChartBar, FaHandshake } from "react-icons/fa6";
+import { FaBroom, FaChartBar } from "react-icons/fa6";
 
 const projects = [
   {
-    href: "https://earthdayartcontest.vercel.app",
-    tag: "Art + Environment",
-    icon: <FaLeaf size={15} color="#9e9a96" />,
-    title: "Earth Day Art Contest",
-    description:
-      "An art competition for ages 5–17 celebrating Earth Day 2026, with prizes across two age groups.",
-  },
-  {
     href: "https://collegestatistics.org",
-    tag: "Data Analytics",
     icon: <FaChartBar size={15} color="#9e9a96" />,
     title: "College Statistics",
     description:
@@ -21,19 +12,10 @@ const projects = [
   },
   {
     href: "https://dunebroom.com",
-    tag: "Robotics + AI",
     icon: <FaBroom size={15} color="#9e9a96" />,
     title: "DuneBroom",
     description:
       "An autonomous beach-cleaning robot using edge AI and computer vision to remove litter.",
-  },
-  {
-    href: "https://buddybridge.us",
-    tag: "Community",
-    icon: <FaHandshake size={15} color="#9e9a96" />,
-    title: "BuddyBridge",
-    description:
-      "A platform connecting elderly adults with teen volunteers for free, everyday task assistance.",
   },
 ];
 
@@ -104,19 +86,6 @@ export default function ProjectsSection() {
                     marginBottom: "0.75rem",
                   }}
                 >
-                  <span
-                    style={{
-                      fontSize: 12,
-                      fontWeight: 500,
-                      color: "#9e9a96",
-                      border: "1px solid #e8e5df",
-                      borderRadius: 5,
-                      padding: "0.2rem 0.55rem",
-                      letterSpacing: "0.03em",
-                    }}
-                  >
-                    {project.tag}
-                  </span>
                   {project.icon}
                 </div>
 

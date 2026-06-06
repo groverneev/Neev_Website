@@ -13,10 +13,10 @@ export default function Navbar() {
   return (
     <nav
       style={{
-        background: "rgba(250, 249, 247, 0.90)",
+        background: "rgba(250, 249, 247, 0.55)",
         backdropFilter: "blur(12px)",
         WebkitBackdropFilter: "blur(12px)",
-        borderBottom: "1px solid rgba(0,0,0,0.07)",
+        borderBottom: "1px solid rgba(0,0,0,0.05)",
         position: "sticky",
         top: 0,
         zIndex: 50,

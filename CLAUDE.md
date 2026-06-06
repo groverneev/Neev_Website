@@ -29,7 +29,7 @@ components/
   Navbar.tsx          — Sticky glassy dark navbar with mobile hamburger
   Footer.tsx          — Single-row footer (copyright, privacy link, social icons)
   BlogSection.tsx     — Slim "Writing" card linking to Substack newsletter
-  ProjectsSection.tsx — 2-column projects grid (Earth Day Art Contest, College Statistics, DuneBroom, BuddyBridge)
+  ProjectsSection.tsx — 2-column projects grid (College Statistics, DuneBroom)
   ContactSection.tsx  — Contact form using Formspree
   PrivacyPolicy.tsx   — Privacy policy content
 
@@ -46,12 +46,10 @@ public/
 - LinkedIn: https://www.linkedin.com/in/neevgrover/
 - College Statistics project: https://collegestatistics.org
 - DuneBroom project: https://dunebroom.com
-- BuddyBridge project: https://buddybridge.us
-- Earth Day Art Contest: https://earthdayartcontest.vercel.app
 
 ## Important Notes
 
-- `ProjectsSection.tsx` shows 4 projects in a 2-column grid: Earth Day Art Contest, College Statistics, DuneBroom, BuddyBridge.
+- `ProjectsSection.tsx` shows 2 projects in a 2-column grid: College Statistics, DuneBroom.
 - `BlogSection.tsx` is a slim single-row card (not a full section) in the "Writing" area.
 - Social links appear in both `page.tsx` (hero section) and `Footer.tsx` — keep them in sync when updating.
 - `rss-parser` remains as an installed dependency but is no longer used (blog page was removed). Safe to uninstall if desired.

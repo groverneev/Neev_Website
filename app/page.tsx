@@ -16,7 +16,7 @@ const iconStyle: React.CSSProperties = {
 
 export default function Home() {
   return (
-    <main style={{ background: "#faf9f7" }}>
+    <main>
       {/* ───────── HERO ───────── */}
       <section
         id="hero"
@@ -26,7 +26,6 @@ export default function Home() {
           alignItems: "center",
           textAlign: "center",
           padding: "120px 1.5rem 100px",
-          background: "radial-gradient(ellipse at 50% -10%, rgba(212,98,58,0.11) 0%, transparent 65%), #faf9f7",
         }}
       >
         <Image

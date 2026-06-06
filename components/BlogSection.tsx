@@ -81,22 +81,8 @@ export default function BlogSection() {
               </div>
             </div>
 
-            {/* Right: badge + arrow */}
+            {/* Right: arrow */}
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flexShrink: 0 }}>
-              <span
-                style={{
-                  fontSize: 12,
-                  fontWeight: 500,
-                  color: "#9e9a96",
-                  border: "1px solid #e8e5df",
-                  borderRadius: 5,
-                  padding: "0.2rem 0.6rem",
-                  letterSpacing: "0.04em",
-                  textTransform: "uppercase",
-                }}
-              >
-                Newsletter
-              </span>
               <svg
                 width="14"
                 height="14"
