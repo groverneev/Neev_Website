@@ -62,7 +62,7 @@ export default function Home() {
             letterSpacing: "-0.01em",
           }}
         >
-          Sophomore at Harker School · building things I care about
+          Rising Junior at Harker School · building things I care about
         </p>
 
         <p
