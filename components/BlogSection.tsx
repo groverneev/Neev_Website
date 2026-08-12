@@ -4,7 +4,7 @@ import { SiSubstack } from "react-icons/si";
 
 export default function BlogSection() {
   return (
-    <section style={{ padding: "0 2rem" }}>
+    <section id="writing" style={{ padding: "0 2rem", scrollMarginTop: "80px" }}>
       <div style={{ maxWidth: 800, margin: "0 auto" }}>
         {/* Section label */}
         <p

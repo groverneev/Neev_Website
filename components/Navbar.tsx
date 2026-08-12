@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const navLinks = [
   { href: "https://techunpacked.substack.com", label: "Blog", external: true },
-  { href: "/#projects", label: "Projects", external: false },
+  { href: "/#writing", label: "Projects", external: false },
   { href: "/#contact", label: "Contact", external: false },
 ];
 
