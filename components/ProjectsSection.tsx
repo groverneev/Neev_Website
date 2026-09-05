@@ -8,7 +8,7 @@ const projects = [
     icon: <FaChartBar size={15} color="#9e9a96" />,
     title: "College Statistics",
     description:
-      "A data visualization dashboard comparing universities using Common Data Set metrics over time.",
+      "A data visualization dashboard comparing university statistics over time.",
   },
   {
     href: "https://dunebroom.com",

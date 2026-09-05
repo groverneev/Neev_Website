@@ -76,7 +76,7 @@ export default function BlogSection() {
                     textOverflow: "ellipsis",
                   }}
                 >
-                  Guides and deep dives on AI, robotics, and software.
+                  Deep dives on AI, robotics, and software.
                 </span>
               </div>
             </div>
